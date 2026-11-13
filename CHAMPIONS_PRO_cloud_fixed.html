@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5fbff"><title>CHAMPIONS PRO | أبطال محترفون</title>
+<style>
+:root{--bg:#f4f9fd;--surface:#fff;--surface2:#eaf6fc;--ink:#183247;--muted:#708596;--line:#dceaf2;--cyan:#13a9c7;--cyan2:#087f9c;--gold:#d8a72e;--goldbg:#fff7df;--green:#16875e;--red:#c94b59;--shadow:0 12px 32px #1a668012;--radius:18px}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#edf8fd 0,#f7fbfe 260px,var(--bg) 100%);color:var(--ink);font:14px/1.7 Tahoma,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:10px 15px;background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#fff;font-weight:700;box-shadow:0 5px 14px #0b91ad20}button:active{transform:translateY(1px)}button.secondary{background:#edf6fa;color:#31556a;border:1px solid var(--line);box-shadow:none}button.gold{background:linear-gradient(135deg,#f0d27a,#c99a25);color:#49370a}button.danger{background:#fff0f1;color:#b43c4b;border:1px solid #f5d5d9;box-shadow:none}button.small{padding:6px 10px;font-size:12px;border-radius:9px}button:disabled{opacity:.45;cursor:not-allowed}
+input,select,textarea{width:100%;min-width:0;background:#fbfdff;color:var(--ink);border:1px solid #d5e5ee;border-radius:11px;padding:10px 11px;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #13a9c71b}textarea{min-height:80px}.app{max-width:1180px;margin:auto;padding:14px 15px 80px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;background:#ffffffd9;border:1px solid #fff;border-radius:22px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,#fff1b8 0,#f1cc60 34%,#bd8a1d 100%);font-size:28px;box-shadow:0 8px 20px #c99b2940,inset 0 1px 0 #fff9;border:1px solid #e7c45c;position:relative}.logo:after{content:"";position:absolute;inset:4px;border:1px solid #fff8;border-radius:13px}.brand h1{margin:0;font-size:19px;letter-spacing:.4px}.brand small{color:var(--cyan2);font-weight:700}.top-actions{display:flex;gap:7px;flex-wrap:wrap}
+.hero{margin:14px 0;padding:23px 24px;border-radius:23px;background:linear-gradient(112deg,#102c43 0%,#087f9c 56%,#19b4c5 100%);color:#fff;position:relative;overflow:hidden;box-shadow:0 16px 34px #087f9c30;border:1px solid #ffffff50}.hero:before{content:"CHAMPIONS  •  PRO";position:absolute;left:22px;bottom:9px;font-size:10px;letter-spacing:3px;color:#e5fbff80;font-weight:900}.hero:after{content:"🏆";position:absolute;left:25px;top:-18px;font-size:110px;opacity:.13;transform:rotate(-14deg)}.hero h2{margin:0 0 4px;font-size:22px}.hero p{margin:0;color:#e4faff;max-width:650px}
+.nav{display:flex;gap:7px;overflow:auto;padding:8px 2px 13px;position:sticky;top:0;z-index:20;background:#f4f9fdef;backdrop-filter:blur(10px)}.nav button{white-space:nowrap;background:#fff;color:#587386;border:1px solid var(--line);box-shadow:none;padding:9px 13px}.nav button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.page{display:none}.page.active{display:block;animation:fade .2s ease}@keyframes fade{from{opacity:.55;transform:translateY(4px)}to{opacity:1;transform:none}}
+.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:8px 2px 14px}.sectionhead h2{margin:0;font-size:19px}.sectionhead small{color:var(--muted)}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px;margin-bottom:13px;box-shadow:var(--shadow)}.card h3{margin:0 0 10px;font-size:15px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:11px}.formgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:10px}.field{display:flex;flex-direction:column;gap:5px;margin-bottom:9px}.field label{font-size:12px;color:var(--muted);font-weight:700}.statcard{position:relative;overflow:hidden}.statcard small{color:var(--muted)}.stat{font-size:29px;font-weight:900;color:var(--cyan2);line-height:1.4}.staticon{position:absolute;left:14px;top:15px;font-size:25px;opacity:.22}.muted,small{color:var(--muted)}.goldtxt{color:#a8790c}.badge{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:30px;background:#e8f7fb;color:#087f9c;font-size:11px;font-weight:700}.badge.gold{background:var(--goldbg);color:#98700d}.notice{padding:12px 14px;border-radius:13px;background:#fff9e9;border-right:4px solid var(--gold);color:#705819;margin:10px 0}.empty{text-align:center;color:var(--muted);padding:22px}.actions,.row{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.between{justify-content:space-between}.player-chip{display:inline-flex;align-items:center;gap:6px;background:var(--surface2);padding:7px 10px;border-radius:10px;margin:3px}.avatar{width:29px;height:29px;border-radius:50%;object-fit:cover;background:#e5f3f8;display:inline-grid;place-items:center;font-weight:800;color:var(--cyan2);vertical-align:middle}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:13px}table{border-collapse:collapse;width:100%;min-width:470px;text-align:center;font-size:12px}th,td{padding:9px 7px;border-bottom:1px solid var(--line);white-space:nowrap}th{background:#eaf6fb;color:#17647b;font-weight:800}tr:last-child td{border:0}.match-card{padding:12px 0;border-bottom:1px solid var(--line)}.match-card:last-child{border:0}.match-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.match-players{display:flex;align-items:center;gap:8px;flex:1;min-width:170px}.match-players b{font-size:13px}.vs{color:#93a7b5;font-size:11px}.score-entry{display:flex;align-items:center;gap:5px;direction:ltr}.score-input{width:48px!important;text-align:center;direction:ltr;padding:7px 3px;font-weight:900;font-size:16px;border-color:#b9d9e5}.match-meta{font-size:11px;color:var(--muted);margin-top:5px}.round-title{display:flex;align-items:center;gap:8px;color:#087f9c;font-weight:900;margin:15px 0 4px}.round-title:after{content:"";height:1px;background:var(--line);flex:1}.prediction-match{display:grid;grid-template-columns:minmax(0,1fr) 54px 54px;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.prediction-match input{text-align:center;direction:ltr;font-weight:800}.news-card{border:1px solid var(--line);border-right:4px solid var(--cyan);padding:14px;background:linear-gradient(120deg,#fff,#f3fbfe);border-radius:13px;margin:10px 0}.news-card h3{color:#087f9c;margin:5px 0}.hidden{display:none!important}.footer{text-align:center;color:#91a5b3;font-size:11px;padding:15px}
+.fixture-card{padding:14px 12px;border:1px solid #dcecf3;border-radius:16px;background:linear-gradient(145deg,#fff 0%,#f5fbfe 100%);margin:9px 0;box-shadow:0 7px 18px #1a66800b}
+.fixture-main{display:grid;grid-template-columns:minmax(0,1fr) 38px minmax(0,1fr);align-items:center;gap:7px;direction:rtl}
+.fixture-team{display:flex;align-items:center;gap:6px;min-width:0;font-weight:800}.fixture-player{display:flex;align-items:center;gap:5px;min-width:0}.fixture-player b{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fixture-team.home{justify-content:flex-start}.fixture-team.away{justify-content:flex-end}
+.fixture-team b{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fixture-team .score-input{flex:0 0 43px;width:43px!important;height:39px;border:2px solid #b8dce8;background:#fff;border-radius:11px;color:#075f78;font-size:18px;box-shadow:0 3px 9px #0b91ad10}
+.fixture-vs{font-size:10px;font-weight:900;color:#fff;background:linear-gradient(145deg,#d9b24b,#a8790c);border-radius:12px;text-align:center;padding:5px 2px;letter-spacing:.5px}
+.fixture-tools{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px;padding-top:9px;border-top:1px dashed #d6e7ee}
+.fixture-tools .match-meta{margin:0;min-width:0}
+.compact-table-wrap{overflow:hidden;border:1px solid var(--line);border-radius:13px}
+.compact-table{width:100%;min-width:0;table-layout:fixed;font-size:10px}
+.compact-table th,.compact-table td{padding:7px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.compact-table th:nth-child(1){width:5%}.compact-table th:nth-child(2){width:18%}.compact-table th:nth-child(3){width:7%}.compact-table th:nth-child(4),.compact-table th:nth-child(5),.compact-table th:nth-child(6){width:8%}.compact-table th:nth-child(7),.compact-table th:nth-child(8){width:8%}.compact-table th:nth-child(9){width:9%}.compact-table th:nth-child(10){width:9%}
+.compact-table .player-cell{text-align:right;font-weight:800}
+.goal-tables{display:grid;grid-template-columns:1fr;gap:12px;margin-top:15px}
+.goal-table{width:100%;min-width:0;table-layout:fixed;font-size:11px}
+.goal-table th,.goal-table td{padding:8px 4px;white-space:normal;overflow-wrap:anywhere}
+.goal-table th:nth-child(1){width:34%}.goal-table th:nth-child(2){width:18%}.goal-table th:nth-child(3){width:22%}.goal-table th:nth-child(4){width:26%}
+.goal-panel{border:1px solid var(--line);border-radius:14px;padding:11px;background:linear-gradient(145deg,#fff,#f5fbfe)}
+.goal-panel h3{display:flex;align-items:center;gap:7px;color:#087f9c;margin:0 0 9px}
+@media(max-width:560px){.app{padding:8px 9px 60px}.topbar{padding:10px;border-radius:17px}.brand h1{font-size:16px}.logo{width:41px;height:41px}.hero{padding:16px;border-radius:17px}.hero h2{font-size:19px}.hero:after{font-size:75px;left:8px}.card{padding:11px;border-radius:15px}.sectionhead h2{font-size:17px}.match-players{min-width:130px}.score-input{width:42px!important}.nav{margin:0 -2px}.prediction-match{grid-template-columns:minmax(0,1fr) 46px 46px;gap:5px}}
+
+/* CHAMPIONS PRO visual refresh */
+:root{--ink:#102d69;--muted:#536b91;--line:#d7e6f8;--cyan:#168ce2;--cyan2:#0754ad;--gold:#e4ad27;--shadow:0 8px 22px #164d8c16;--radius:20px}
+body{font-family:Tahoma,"Noto Sans Arabic",Arial,sans-serif;font-size:15px;line-height:1.75;background:linear-gradient(180deg,#eaf5ff 0,#f8fbff 360px,#f3f7ff 100%);color:#102d69}
+button,input,select,textarea{font-family:inherit;font-size:15px}
+button{font-weight:800}
+.topbar{position:relative;display:grid;grid-template-columns:48px 1fr 48px;align-items:center;gap:8px;padding:10px 12px;border-radius:22px;background:#ffffffed}
+.brand{justify-content:center;text-align:center;gap:8px}
+.brand-copy h1{font-size:clamp(19px,3vw,29px);font-weight:900;letter-spacing:.2px;color:#102d69;margin:0;line-height:1.1}
+.brand-copy h1 span{color:#e3a321}
+.brand-copy small{display:block;color:#174c91;font-size:12px;font-weight:800}
+.logo{width:42px;height:42px;border-radius:50%;font-size:25px}
+.menu-trigger,.profile-trigger{width:44px;height:44px;padding:0;border-radius:50%;display:grid;place-items:center;font-size:21px;background:linear-gradient(145deg,#167fe0,#06469b);color:white;box-shadow:0 4px 12px #0754ad35}
+.profile-trigger{background:linear-gradient(145deg,#eaf6ff,#c6e4ff);color:#124b96;border:1px solid #a8d2f5}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:180px;margin:14px 0;padding:20px 24px;border-radius:24px;background:linear-gradient(120deg,#d8edff 0%,#fff 40%,#0c65bc 41%,#063b91 100%);color:#fff;border:1px solid #c8e2ff;box-shadow:0 12px 26px #0c58a529}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 15%,#fff 0,transparent 35%),linear-gradient(165deg,transparent 58%,#f0bd43 59%,#fff0 62%);opacity:.85}
+.hero:after{content:"";position:absolute;left:20px;top:8px;bottom:8px;width:36%;font-size:0;opacity:.5;background:radial-gradient(ellipse at center,#fff 0,#d7edff 35%,transparent 70%)}
+.hero-cup{position:relative;z-index:1;font-size:clamp(65px,12vw,112px);filter:drop-shadow(0 8px 5px #8b641d55);margin-inline:3%}
+.hero-copy{position:relative;z-index:1;text-align:right;margin-right:auto}
+.hero-kicker{font-size:12px;letter-spacing:2px;color:#ffdb70;font-weight:900}
+.hero h2{font-size:clamp(23px,4vw,34px);font-weight:900;margin:4px 0;color:#fff;text-shadow:0 2px 8px #002e70}
+.hero p{margin:0;color:#eaf5ff;font-size:17px;font-weight:800}
+.home-heading{margin:16px 2px}
+.home-heading h2{font-size:20px;font-weight:900}
+.home-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0 16px}
+.home-tile{position:relative;min-height:128px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:12px 8px;border-radius:22px;background:linear-gradient(150deg,#fff,#eaf4ff);border:1px solid #c6dcf6;color:#102d69;box-shadow:0 5px 13px #1c5e9e18}
+.home-tile b{font-size:17px;font-weight:900}
+.home-tile small{font-size:12px;font-weight:700;color:#425e89}
+.home-tile .tile-icon{font-size:36px;line-height:1.3;filter:drop-shadow(0 3px 2px #185ca52b)}
+.home-tile i{position:absolute;left:10px;top:calc(50% - 12px);width:25px;height:25px;border-radius:50%;background:linear-gradient(145deg,#278ce6,#064d9e);color:white;font-size:24px;font-style:normal;line-height:21px}
+.tile-tournaments,.tile-history{background:linear-gradient(150deg,#fffdf5,#fff0d4);border-color:#f0d79a}
+.tile-news,.tile-matches{background:linear-gradient(150deg,#fff,#e5f3ff)}
+.tile-standings{background:linear-gradient(150deg,#fff,#fff0dc);border-color:#efd4a1}
+.prediction-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;margin:16px 0;border-radius:23px;cursor:pointer;color:white;background:linear-gradient(110deg,#0a3b91,#0874d0 55%,#123d89);border:2px solid #f1cb61;box-shadow:0 8px 20px #0b4e9e2b;position:relative;overflow:hidden}
+.prediction-banner:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 40%,#ffffff44,transparent 24%),linear-gradient(160deg,transparent 60%,#35a7df55)}
+.prediction-ball{font-size:clamp(45px,9vw,76px);position:relative;z-index:1}
+.prediction-copy{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;flex:1}
+.prediction-copy span{font-size:clamp(19px,3vw,28px);font-weight:900;color:#ffdc6d}
+.prediction-copy b{font-size:14px}
+.prediction-copy strong{font-size:clamp(22px,4vw,34px);font-weight:900;color:#ffdb61}
+.prediction-copy small{color:#fff;font-weight:800}
+.prediction-banner button{position:relative;z-index:1;background:linear-gradient(135deg,#ffdc68,#e8a91e);color:#183c79;border:1px solid #fff0a8;white-space:nowrap}
+.home-lower-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.home-lower-grid .card{margin:0}
+.trophy-feature{display:flex;align-items:center;gap:12px;padding:8px 0}
+.trophy-feature>span{font-size:55px;filter:drop-shadow(0 4px 3px #a8790c55)}
+.trophy-feature b{font-size:19px;font-weight:900}
+.tournament-dates{font-size:12px;color:#536b91;font-weight:700;margin-top:5px}
+.home-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}
+.home-stats .card{margin:0}
+.statcard small{font-size:13px;font-weight:800}
+.stat{font-size:30px;font-weight:900}
+.sectionhead h2,.card h3{font-weight:900}
+.sectionhead h2{font-size:19px}
+.card h3{font-size:17px}
+.sectionhead small{font-size:13px;font-weight:700;color:#536b91}
+.card{border-color:#d8e6f6;box-shadow:0 6px 17px #164d8c12}
+.field label{font-size:14px;color:#435d83;font-weight:800}
+input,select,textarea{font-size:15px;font-weight:600}
+.muted,small{color:#52698c}
+.badge{font-size:12px;font-weight:800}
+table{font-size:13px}
+th,td{font-size:13px;padding:10px 7px}
+th{font-weight:900}
+.match-players b,.fixture-team b,.fixture-player b{font-size:14px;font-weight:800}
+.match-meta{font-size:12px;font-weight:700}
+.compact-table,.goal-table{font-size:12px}
+.compact-table th,.compact-table td,.goal-table th,.goal-table td{font-size:12px;font-weight:700}
+.nav{position:fixed;top:auto;bottom:0;left:0;right:0;z-index:50;display:flex;justify-content:space-around;gap:3px;padding:7px max(8px,env(safe-area-inset-left)) calc(7px + env(safe-area-inset-bottom));margin:0;background:#ffffffed;border:1px solid #d9e8f7;border-bottom:0;border-radius:19px 19px 0 0;box-shadow:0 -5px 22px #1a55851a;backdrop-filter:blur(14px)}
+.nav button{display:flex;flex:1;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:0;white-space:nowrap;padding:5px 2px;border:0;background:transparent;color:#234778;font-size:11px;font-weight:900;box-shadow:none;border-radius:13px}
+.nav button span{font-size:21px;line-height:1.25}
+.nav button.active{background:linear-gradient(145deg,#168ee9,#0752ad);color:#fff;box-shadow:0 4px 12px #0a62b838}
+.nav.menu-open{top:72px;bottom:auto;left:12px;right:12px;border:1px solid #cbdff4;border-radius:16px;box-shadow:0 12px 30px #0b3d762e}
+.nav.menu-open button{flex-direction:row;gap:6px;font-size:13px;padding:10px}
+.nav.menu-open button span{font-size:18px}
+.app{padding-bottom:105px}
+.footer{font-size:12px;font-weight:700}
+@media(max-width:700px){.home-tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.home-tile{min-height:118px}.home-tile b{font-size:16px}.home-tile small{font-size:11px}.home-lower-grid{grid-template-columns:1fr}.home-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{min-height:155px;padding:14px}.prediction-banner{padding:12px 10px}.prediction-banner button{font-size:12px;padding:8px}.nav button{font-size:10px}.nav button span{font-size:19px}}
+@media(max-width:380px){.nav button{font-size:9px}.nav button span{font-size:17px}.brand-copy small{font-size:10px}.home-tile small{font-size:10px}.hero p{font-size:14px}}
+
+/* CHAMPIONS PRO - vertical side navigation */
+.nav.sidebar{position:fixed;top:0;bottom:0;right:0;left:auto;width:min(330px,86vw);height:100dvh;z-index:120;display:flex;flex-direction:column;gap:0;padding:0;margin:0;overflow:hidden;background:#fff;border:0;border-left:1px solid #d6e5f7;border-radius:0 0 0 0;box-shadow:-14px 0 38px #123d7026;backdrop-filter:none;transform:translateX(110%);transition:transform .28s cubic-bezier(.2,.75,.25,1)}
+.nav.sidebar.menu-open{top:0;bottom:0;left:auto;right:0;transform:translateX(0);border:0;border-left:1px solid #d6e5f7;border-radius:0;box-shadow:-14px 0 38px #123d7026}
+.sidebar-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:22px 18px 18px;background:linear-gradient(135deg,#f1f8ff,#e3f3ff);border-bottom:1px solid #dceafb;flex-shrink:0}
+.sidebar-brand{display:flex;align-items:center;gap:11px;min-width:0}
+.sidebar-brand strong{display:block;color:#123d80;font-size:16px;letter-spacing:.2px;white-space:nowrap}
+.sidebar-brand strong span{color:#168ce2}
+.sidebar-brand small{display:block;color:#6882a7;font-size:10px;font-weight:700;margin-top:2px}
+.sidebar-logo{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#ffe9a4,#d4a52e);font-size:25px;box-shadow:0 5px 14px #bd8a1d30}
+.sidebar-close{width:36px;height:36px;min-width:36px;padding:0;display:grid;place-items:center;border-radius:11px;background:#fff;color:#164b91;border:1px solid #d6e5f7;box-shadow:none;font-size:25px;line-height:1}
+.nav.sidebar .sidebar-links{display:flex;flex-direction:column;gap:5px;padding:14px 12px 22px;overflow-y:auto;overscroll-behavior:contain;flex:1}
+.nav.sidebar .sidebar-links button{display:flex;flex:0 0 auto;min-width:0;width:100%;align-items:center;justify-content:flex-start;gap:13px;padding:11px 13px;border:1px solid transparent;border-radius:12px;background:transparent;color:#294b78;box-shadow:none;font-size:14px;font-weight:800;text-align:right;white-space:normal}
+.nav.sidebar .sidebar-links button span{width:25px;flex:0 0 25px;text-align:center;font-size:19px;line-height:1.2}
+.nav.sidebar .sidebar-links button.active{background:linear-gradient(110deg,#168ee9,#0752ad);color:#fff;border-color:#147bd0;box-shadow:0 5px 14px #0a62b82b}
+.sidebar-backdrop{position:fixed;inset:0;z-index:110;background:#071d3d75;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.sidebar-backdrop.visible{opacity:1;visibility:visible}
+.app{padding-bottom:0}
+@media(min-width:701px){.nav.sidebar{width:340px}.sidebar-head{padding:25px 20px 20px}.nav.sidebar .sidebar-links{padding:17px 14px 24px}}
+@media(max-width:700px){.nav.sidebar .sidebar-links button{font-size:14px;padding:12px 13px}.app{padding-bottom:0}}
+
+/* CHAMPIONS PRO palette refinement: white, royal blue, cyan, restrained gold */
+:root{
+ --bg:#F3F6FA;--surface:#FFFFFF;--surface2:#DFF5FF;
+ --ink:#344054;--muted:#667085;--line:#E4EAF1;
+ --cyan:#174EA6;--cyan2:#123F88;--gold:#D6AD50;--goldbg:#FFF8E8;
+ --shadow:0 8px 22px #174EA610;--radius:18px;
+}
+body{background:linear-gradient(180deg,#EAF6FC 0,#FFFFFF 300px,#F3F6FA 100%);color:#344054}
+button{background:linear-gradient(135deg,#174EA6,#123F88);box-shadow:0 4px 12px #174EA620}
+button.secondary{background:#DFF5FF;color:#174EA6;border-color:#C7E8F5}
+button.gold{background:linear-gradient(135deg,#E8CA83,#D6AD50);color:#49370A}
+.topbar,.card,.fixture-card{background:#FFFFFF;border-color:#E4EAF1}
+.nav.sidebar{background:#FFFFFF}
+.sidebar-head{background:linear-gradient(135deg,#F4FAFF,#DFF5FF);border-bottom-color:#D5EAF5}
+.sidebar-brand strong,.brand-copy h1{color:#174EA6}
+.sidebar-links button.active{background:#E5F3FF;color:#174EA6;border-color:#C5E2FA}
+.sidebar-links button:hover{background:#F0F8FD}
+.hero{border-color:#D4E7F8}
+.home-tile{background:linear-gradient(150deg,#FFFFFF,#EAF6FC);border-color:#DCEAF2;color:#174EA6}
+.tile-tournaments,.tile-history{background:linear-gradient(150deg,#FFFFFF,#FFF8E8);border-color:#EAD9B3}
+.tile-news,.tile-matches{background:linear-gradient(150deg,#FFFFFF,#EAF6FC)}
+.tile-standings{background:linear-gradient(150deg,#FFFFFF,#FFF8E8);border-color:#EAD9B3}
+.round-title,.news-card h3{color:#174EA6}
+.news-card{border-right-color:#174EA6;background:linear-gradient(120deg,#FFFFFF,#F3F9FD)}
+.fixture-card{background:#FFFFFF;border-color:#E4EAF1;box-shadow:0 5px 16px #174EA610}
+.fixture-team .score-input,.score-input{
+ width:36px!important;min-width:36px;max-width:36px;height:34px!important;
+ flex:0 0 36px!important;padding:3px 2px!important;
+ border:1.5px solid #B9D9F0!important;border-radius:9px!important;
+ background:#FFFFFF!important;color:#174EA6!important;
+ text-align:center!important;direction:ltr!important;unicode-bidi:isolate;
+ font-family:Arial,Tahoma,sans-serif!important;font-size:17px!important;
+ font-weight:900!important;font-variant-numeric:lining-nums tabular-nums;
+ box-shadow:none!important;
+}
+.score-display{direction:ltr;unicode-bidi:isolate;font-family:Arial,Tahoma,sans-serif;font-variant-numeric:lining-nums tabular-nums;color:#174EA6}
+.score-input:focus{border-color:#174EA6!important;box-shadow:0 0 0 3px #174EA61A!important}
+.fixture-meta,.match-meta{font-variant-numeric:lining-nums tabular-nums}
+
+
+/* CHAMPIONS PRO: rounds, awards and responsive hero motto */
+.hero{position:relative;overflow:hidden}
+.hero-copy{min-width:0;max-width:62%}
+.hero-motto{color:#FFD84D!important;font-size:clamp(19px,3.4vw,31px)!important;line-height:1.45!important;overflow-wrap:anywhere;text-wrap:balance;text-shadow:0 2px 5px #002b67,0 0 12px #001f50!important}
+.round-group{margin:14px 0 18px;padding:13px;background:linear-gradient(145deg,#fff,#f3f9ff);border:1px solid #cfe1f3;border-radius:18px;box-shadow:0 5px 15px #174ea610}
+.round-group>.round-title{margin:0 0 11px;padding:8px 11px;border-radius:11px;background:#e7f3ff;color:#174EA6;font-weight:900;border-right:4px solid #D6AD50}
+.round-group .fixture-card{margin:9px 0}
+.award-editor-row{display:grid;grid-template-columns:1.2fr .8fr 1fr auto;gap:8px;align-items:end;padding:10px;margin:9px 0;border:1px solid #dce8f4;border-radius:13px;background:#f8fbff}
+.award-editor-row .field{margin:0;min-width:0}
+.award-card{padding:13px;margin:9px 0;border:1px solid #dce8f4;border-radius:14px;background:#fff}
+.award-card h4{margin:0 0 7px;color:#174EA6}
+.award-status{display:inline-block;padding:3px 9px;border-radius:20px;background:#fff4d8;color:#805c08;font-size:12px;font-weight:800}
+.award-status.paid{background:#e6f7ed;color:#167344}
+@media(max-width:600px){.hero{gap:8px}.hero-copy{max-width:72%;margin:0}.hero-cup{font-size:clamp(48px,14vw,76px);margin:0}.hero-motto{font-size:clamp(17px,5vw,23px)!important;line-height:1.5!important}.award-editor-row{grid-template-columns:1fr 1fr}.award-editor-row .field:first-child{grid-column:1/-1}.award-editor-row .field:nth-child(3){grid-column:1/-1}}
+
+.bracket-scoreline{display:flex;align-items:center;justify-content:flex-start;gap:8px;direction:rtl;flex-wrap:wrap;margin:7px 0;min-width:0}
+.bracket-team{font-weight:800;min-width:0;overflow-wrap:anywhere}
+.bracket-score{display:inline-flex;min-width:18px;justify-content:center;font-weight:900}
+.bracket-separator{color:#8a9aaa;font-weight:800}
+@media(max-width:480px){.bracket-scoreline{gap:6px;font-size:13px}.bracket-team{max-width:38%}}
+
+/* Temporary administrator gate: client-side preview lock only */
+.admin-access{display:flex;flex-direction:column;gap:6px;min-width:120px;margin-inline-start:auto}
+.admin-status{font-size:11px;color:#667085;font-weight:800;text-align:center}
+.admin-access-btn{border:1px solid #d6ad50!important;background:#fff8e6!important;color:#805c08!important;border-radius:10px!important;padding:8px 10px!important;font-size:12px!important;font-weight:900!important;white-space:nowrap}
+body.admin-mode .admin-status{color:#167344}
+body.admin-mode .admin-access-btn{background:#e8f7ee!important;color:#167344!important;border-color:#9dd7b4!important}
+.admin-login-backdrop{display:none;position:fixed;inset:0;z-index:99999;background:#10243bcc;align-items:center;justify-content:center;padding:18px}
+.admin-login-backdrop.visible{display:flex}
+.admin-login-box{position:relative;width:min(100%,370px);background:#fff;border-radius:20px;padding:25px;box-shadow:0 20px 70px #001b3d55;display:flex;flex-direction:column;gap:11px;text-align:right}
+.admin-login-icon{font-size:34px;text-align:center}.admin-login-box h3{margin:0;text-align:center;color:#174ea6}.admin-login-box p{margin:0 0 5px;text-align:center;color:#667085;font-size:13px}
+.admin-login-box label{font-weight:800;font-size:13px}.admin-login-box input{width:100%;box-sizing:border-box;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font-size:18px;direction:ltr;text-align:center}
+.admin-login-submit{border:0;border-radius:11px;background:#174ea6;color:#fff;padding:12px;font-weight:900}.admin-login-close{position:absolute;left:12px;top:10px;border:0;background:transparent;font-size:25px;color:#667085}.admin-login-error{color:#b42318;font-size:12px;min-height:16px;text-align:center}
+/* Participants can browse but cannot use administrative controls. */
+body:not(.admin-mode) #tournaments .sectionhead button,body:not(.admin-mode) #players .sectionhead button,body:not(.admin-mode) #matches .sectionhead button,
+body:not(.admin-mode) #tournamentEditor,body:not(.admin-mode) #playerEditor,body:not(.admin-mode) #manualMatch,
+body:not(.admin-mode) #matchList button,body:not(.admin-mode) #matchList input,body:not(.admin-mode) #awardsList button,
+body:not(.admin-mode) #settings input[type=file],body:not(.admin-mode) #settings .pill,
+body:not(.admin-mode) #home .sectionhead button,body:not(.admin-mode) #tournamentList .actions button,
+body:not(.admin-mode) #playerList .actions button,body:not(.admin-mode) #awardsList .actions button,
+body:not(.admin-mode) #predictions input,body:not(.admin-mode) #predictions select,body:not(.admin-mode) #predictions button{display:none!important}
+body:not(.admin-mode) #settings .card{opacity:.78}
+body:not(.admin-mode) .admin-only{display:none!important}
+@media(max-width:520px){.admin-access{min-width:105px}.admin-access-btn{font-size:11px!important;padding:7px 8px!important}.admin-login-box{padding:22px 18px}}
+
+.cloud-status{display:flex;align-items:center;gap:7px;margin:8px 3px 10px;padding:7px 11px;border:1px solid #dce8f4;border-radius:11px;background:#fff;font-size:12px;font-weight:800;color:#536b91}
+.cloud-status .dot{width:8px;height:8px;border-radius:50%;background:#d6ad50;flex:0 0 8px}
+.cloud-status span:last-child{overflow-wrap:anywhere;line-height:1.5}
+.cloud-status.online .dot{background:#16a36a}.cloud-status.offline .dot{background:#d04452}
+</style></head>
+<body><div class="app">
+<header class="topbar"><button class="menu-trigger" aria-label="فتح القائمة" onclick="toggleMainMenu()">☰</button><div class="brand"><div class="brand-copy"><h1>CHAMPIONS <span>PRO</span></h1><small>منصة البطولات والألعاب الرياضية</small></div><div class="logo">🏆</div></div><button class="profile-trigger" aria-label="اللاعبون" onclick="showPage('players')">👤</button></header>
+<div class="hero"><div class="hero-cup">🏆</div><div class="hero-copy"><span class="hero-kicker">CHAMPIONS PRO</span><h2 class="hero-motto">معاً نصنع أبطالاً جدد في عالم البطولات</h2></div></div>
+<div id="cloudStatus" class="cloud-status" role="status" aria-live="polite"><span class="dot"></span><span>جارٍ تهيئة الاتصال السحابي...</span></div>
+<div class="sidebar-backdrop" id="sidebarBackdrop" onclick="closeMainMenu()" aria-hidden="true"></div>
+<aside class="nav sidebar" id="nav" aria-label="القائمة الرئيسية" aria-hidden="true">
+  <div class="sidebar-head">
+    <div class="sidebar-brand"><div class="sidebar-logo">🏆</div><div><strong>CHAMPIONS <span>PRO</span></strong><small>منصة البطولات والألعاب الرياضية</small></div></div>
+    <div class="admin-access"><span id="adminStatus" class="admin-status">وضع المشاهدة</span><button id="adminAccessBtn" type="button" class="admin-access-btn" onclick="openAdminLogin()">🔐 دخول المسؤول</button></div>
+    <button class="sidebar-close" type="button" onclick="closeMainMenu()" aria-label="إغلاق القائمة">×</button>
+  </div>
+  <div class="sidebar-links">
+    <button class="active" data-page="home"><span>⌂</span>الرئيسية</button>
+    <button data-page="players"><span>♟</span>اللاعبون</button>
+    <button data-page="tournaments"><span>🏆</span>البطولات</button>
+    <button data-page="matches"><span>📅</span>المباريات</button>
+    <button data-page="standings"><span>📊</span>الترتيب العام</button>
+    <button data-page="news"><span>📰</span>الأخبار الرياضية</button>
+    <button data-page="stats"><span>📜</span>السجل التاريخي</button>
+    <button data-page="awards"><span>🎖️</span>الجوائز</button>
+    <button data-page="predictions"><span>🎯</span>التوقعات</button>
+    <button data-page="settings"><span>⚙</span>الإعدادات</button>
+  </div>
+</aside>
+<section id="home" class="page active">
+<div class="sectionhead home-heading"><div><h2>مرحباً بك في CHAMPIONS PRO</h2><small>كل المنافسات والإنجازات في مكان واحد</small></div><button onclick="openTournamentForm();showPage('tournaments')">＋ بطولة جديدة</button></div>
+<div class="home-tiles">
+<button class="home-tile tile-players" onclick="showPage('players')"><span class="tile-icon">👥</span><b>اللاعبون</b><small>إدارة اللاعبين والفرق</small><i>‹</i></button>
+<button class="home-tile tile-tournaments" onclick="showPage('tournaments')"><span class="tile-icon">🏆</span><b>البطولات</b><small>إنشاء وإدارة البطولات</small><i>‹</i></button>
+<button class="home-tile tile-matches" onclick="showPage('matches')"><span class="tile-icon">📅</span><b>المباريات</b><small>جدول المباريات والنتائج</small><i>‹</i></button>
+<button class="home-tile tile-standings" onclick="showPage('standings')"><span class="tile-icon">📈</span><b>الترتيب العام</b><small>جداول الترتيب والإحصائيات</small><i>‹</i></button>
+<button class="home-tile tile-news" onclick="showPage('news')"><span class="tile-icon">📰</span><b>الأخبار الرياضية</b><small>آخر أخبار البطولات</small><i>‹</i></button>
+<button class="home-tile tile-history" onclick="showPage('stats')"><span class="tile-icon">📜</span><b>السجل التاريخي</b><small>إنجازات ونتائج سابقة</small><i>‹</i></button>
+</div>
+<div class="prediction-banner" onclick="showPage('predictions')" role="button" tabindex="0"><div class="prediction-ball">⚽</div><div class="prediction-copy"><span>★　التوقعات　★</span><b>توقع النتيجة الصحيحة واحصل على</b><strong>2,000 ريال يمني</strong><small>والفوز بجائزة كبرى</small></div><button onclick="event.stopPropagation();showPage('predictions')">شارك الآن　›</button></div>
+<div class="home-lower-grid">
+<div class="card home-news-panel"><div class="row between"><h3>📰 آخر الأخبار</h3><button class="secondary small" onclick="showPage('news')">كل الأخبار</button></div><div id="homeNews"></div></div>
+<div class="card home-tournament-panel"><div class="row between"><h3>⭐ بطولة هذا الأسبوع</h3><span class="badge gold">البطولة النشطة</span></div><div id="activeTournament"></div></div>
+</div>
+<div class="home-stats" id="homeStats"></div>
+<div class="grid"><div class="card"><h3>🏁 آخر النتائج</h3><div id="homeResults"></div></div><div class="card"><h3>⏳ المباريات القادمة</h3><div id="homeUpcoming"></div></div></div>
+</section>
+<section id="tournaments" class="page"><div class="sectionhead"><div><h2>إدارة البطولات</h2><small>كل بطولة مستقلة بجدولها ونتائجها وجوائزها</small></div><button onclick="openTournamentForm()">＋ إنشاء بطولة</button></div><div id="tournamentEditor" class="card hidden"></div><div id="tournamentList"></div></section>
+<section id="awards" class="page"><div class="sectionhead"><div><h2>جوائز البطولات</h2><small>جميع الجوائز المرتبطة بالبطولات الفعلية</small></div></div><div id="awardsList"></div></section>
+<section id="players" class="page"><div class="sectionhead"><div><h2>قاعدة اللاعبين</h2><small>أسماء اللاعبين وصورهم</small></div><button onclick="openPlayerForm()">＋ لاعب جديد</button></div><div id="playerEditor" class="card hidden"></div><div id="playerList"></div></section>
+<section id="matches" class="page"><div class="sectionhead"><div><h2>المباريات والنتائج</h2><small>أدخل النتيجة مباشرة بجانب اسمي المتنافسين</small></div><button class="secondary" onclick="openManualMatch()">＋ مباراة يدوية</button></div><div class="card"><div class="formgrid"><div class="field"><label>البطولة</label><select id="matchTournament" onchange="renderMatches()"></select></div><div class="field"><label>عرض المباريات</label><select id="matchFilter" onchange="renderMatches()"><option value="all">كل المباريات</option><option value="upcoming">القادمة</option><option value="done">المنتهية</option></select></div></div></div><div id="manualMatch" class="card hidden"></div><div id="matchList" class="card"></div></section>
+<section id="standings" class="page"><div class="sectionhead"><div><h2>الترتيب ومسار التأهل</h2><small>تحديث تلقائي حسب النتائج المعتمدة</small></div></div><div class="card"><div class="formgrid"><div class="field"><label>البطولة</label><select id="standingTournament" onchange="renderStandings()"></select></div><div class="field"><label>المجموعة</label><select id="standingGroup" onchange="renderStandings()"></select></div></div><div id="standingsTable"></div></div><div class="card"><h3>🏁 مسار الأدوار الإقصائية</h3><div id="bracketView"></div></div></section>
+<section id="predictions" class="page"><div class="sectionhead"><div><h2>تحدي التوقعات</h2><small>توقع الجولة القادمة كاملة</small></div><span class="badge gold">🏆 الجائزة 2,000 ﷼</span></div><div class="card"><div class="notice"><b>قانون الجائزة:</b> يحصل كل مشارك على 2,000 ريال إذا توقع جميع نتائج الجولة كاملة وبالأرقام الصحيحة. لا تُمنح الجائزة عن توقع مباراة منفردة، ويمكن أن يفوز أكثر من شخص في الجولة نفسها.</div><div class="field"><label>اسم المشارك</label><select id="predictionPlayer"><option value="">اختر اسمك</option></select></div><div id="predictionRound"></div><button id="submitPrediction" onclick="submitPrediction()">إضافة توقع الجولة</button><div id="predictionMessage" class="muted" style="margin-top:9px"></div></div><div class="card"><h3>🥇 سجل الفائزين بالتوقعات</h3><div id="predictionWinners"></div></div></section>
+<section id="stats" class="page"><div class="sectionhead"><div><h2>الإحصائيات والجوائز الفردية</h2><small>قراءة أداء المشاركين بحسب اللعبة</small></div></div><div class="card"><div class="field"><label>البطولة</label><select id="statsTournament" onchange="renderStats()"></select></div><div id="statsContent"></div></div></section>
+<section id="news" class="page"><div class="sectionhead"><div><h2>المركز الإعلامي</h2><small>تقرير شامل بعد اكتمال الجولة</small></div></div><div id="newsList"></div></section>
+<section id="settings" class="page"><div class="sectionhead"><div><h2>الإعدادات</h2><small>إعدادات العرض وإدارة نسخة البيانات</small></div></div>
+
+<div class="card"><div class="row between"><h3>💾 استيراد البيانات</h3><span class="badge">محلي على هذا الجهاز</span></div><div class="row"><label class="pill">استيراد نسخة JSON <input type="file" accept=".json,application/json" style="display:none" onchange="importBackup(event)"></label></div><p class="muted">تُحفظ البيانات في المتصفح الحالي. الاستيراد متاح لاستعادة نسخة محفوظة مسبقاً.</p></div>
+</section>
+<div class="admin-login-backdrop" id="adminLoginBackdrop" aria-hidden="true">
+ <form class="admin-login-box" onsubmit="event.preventDefault();submitAdminLogin()">
+  <button type="button" class="admin-login-close" onclick="closeAdminLogin()" aria-label="إغلاق">×</button>
+  <div class="admin-login-icon">🔐</div><h3>دخول المسؤول</h3><p>أدخل كلمة المرور لفتح أدوات الإدارة.</p>
+  <label for="adminPasswordInput">كلمة المرور</label>
+  <input id="adminPasswordInput" type="password" inputmode="numeric" autocomplete="current-password" placeholder="أدخل كلمة المرور" required>
+  <div id="adminLoginError" class="admin-login-error" role="alert"></div>
+  <button class="admin-login-submit" type="submit">دخول</button>
+ </form>
+</div>
+<div class="footer">CHAMPIONS PRO • صُممت للمنافسة وصناعة الأبطال</div></div>
+<script>
+const KEY='champions_pro_independent_v3';
+const SUPABASE_URL='https://yochukojjshnbklepwze.supabase.co/rest/v1';
+const SUPABASE_KEY='sb_publishable_RhCCcrmGkXa6nTlwZis4SA_GvffMHsg';
+const CLOUD_TABLE='champions_pro_state';
+const CLOUD_ROW_ID='Main'; // يجب أن يطابق قيمة id الموجودة فعلياً في Supabase
+const GAMES=['كرة القدم بالأصابع','لودو','الذاكرة','السلم والثعبان'];
+const SYSTEMS=['دوري من دور واحد','دوري ذهاب وإياب','خروج مغلوب مباراة واحدة','خروج مغلوب ذهاب وإياب','مجموعات ثم خروج مغلوب','مجموعات ثم خروج مغلوب ذهاب وإياب'];
+function emptyDB(){return{players:[],tournaments:[],active:null}}
+function loadLocal(){try{let x=JSON.parse(localStorage.getItem(KEY));if(x&&Array.isArray(x.players)&&Array.isArray(x.tournaments))return x}catch(e){console.warn('تعذر قراءة النسخة المحلية',e)}return emptyDB()}
+let db=loadLocal();
+function id(){return 'cp_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,8)}
+let isAdmin=false;
+const TEMP_ADMIN_PASSWORD='73505';
+let cloudReady=false;
+let cloudWriteQueue=Promise.resolve();
+let pendingCloudSnapshot=null;
+let cloudWriteRunning=false;
+let cloudLastError=null;
+
+function setCloudStatus(message,state='pending'){
+ const el=document.getElementById('cloudStatus');if(!el)return;
+ el.className='cloud-status '+(state==='online'?'online':state==='offline'?'offline':'');
+ const label=el.querySelector('span:last-child');if(label)label.textContent=message;
+}
+function validDB(x){return !!x&&Array.isArray(x.players)&&Array.isArray(x.tournaments)}
+function localBackup(data=db){
+ try{localStorage.setItem(KEY,JSON.stringify(data));return true}
+ catch(e){console.error('فشل حفظ النسخة المحلية',e);setCloudStatus('تعذر حفظ النسخة المحلية على هذا الجهاز','offline');return false}
+}
+async function supabaseRequest(path,options={}){
+ const response=await fetch(SUPABASE_URL+path,{
+  ...options,
+  headers:{
+   apikey:SUPABASE_KEY,
+   Authorization:'Bearer '+SUPABASE_KEY,
+   'Content-Type':'application/json',
+   ...(options.headers||{})
+  }
+ });
+ const body=await response.text();
+ if(!response.ok)throw new Error('Supabase '+response.status+': '+(body||response.statusText));
+ return body?JSON.parse(body):null;
+}
+async function writeCloud(data){
+ const payload={id:CLOUD_ROW_ID,data,updated_at:new Date().toISOString()};
+ await supabaseRequest('/'+CLOUD_TABLE+'?on_conflict=id',{
+  method:'POST',
+  headers:{Prefer:'resolution=merge-duplicates,return=minimal'},
+  body:JSON.stringify(payload)
+ });
+ cloudLastError=null;
+ setCloudStatus('متصل — تم حفظ البيانات سحابياً','online');
+}
+function hasSavedContent(x){return !!x&&((Array.isArray(x.players)&&x.players.length>0)||(Array.isArray(x.tournaments)&&x.tournaments.length>0)||!!x.active)}
+function cloudErrorText(error){return String(error?.message||error||'خطأ غير معروف').replace(/<[^>]*>/g,' ').slice(0,260)}
+async function load(){
+ const local=loadLocal();
+ setCloudStatus('جارٍ تحميل بيانات Supabase...');
+ try{
+  const rows=await supabaseRequest('/'+CLOUD_TABLE+'?select=data&id=eq.'+encodeURIComponent(CLOUD_ROW_ID)+'&limit=1',{method:'GET'});
+  const remote=rows&&rows.length&&validDB(rows[0].data)?rows[0].data:null;
+  // لا تسمح لسجل سحابي فارغ بمسح نسخة محلية تحتوي على لاعبين أو بطولات.
+  if(remote&&hasSavedContent(remote)){
+   db=remote;localBackup(db);
+   cloudReady=true;
+   setCloudStatus('متصل — تم تحميل البيانات من السحابة','online');
+  }else if(hasSavedContent(local)){
+   db=local;
+   setCloudStatus('عُثر على بيانات محفوظة بهذا الجهاز — جارٍ رفعها للسحابة...');
+   await writeCloud(db);
+   cloudReady=true;
+  }else{
+   db=remote||local;
+   if(!remote)await writeCloud(db);
+   cloudReady=true;
+   setCloudStatus('متصل — قاعدة البيانات جاهزة','online');
+  }
+  return db;
+ }catch(error){
+  cloudLastError=error;db=local;cloudReady=false;
+  setCloudStatus('تعذر الاتصال بالسحابة: '+cloudErrorText(error),'offline');
+  console.error('Supabase load failed:',error);
+  return db;
+ }
+}
+async function flushCloudWrites(){
+ if(cloudWriteRunning)return cloudWriteQueue;
+ cloudWriteRunning=true;
+ cloudWriteQueue=(async()=>{
+  // إذا تتابعت تعديلات أثناء إرسال سجل كبير، نرسل أحدث نسخة معلّقة فقط
+  // بدلاً من وضع كل نسخة قديمة في طابور يرهق قاعدة البيانات.
+  while(pendingCloudSnapshot){
+   const snapshot=pendingCloudSnapshot;
+   pendingCloudSnapshot=null;
+   try{
+    await writeCloud(snapshot);
+    cloudLastError=null;
+   }catch(error){
+    cloudLastError=error;
+    setCloudStatus('فشل الحفظ السحابي: '+cloudErrorText(error)+' — احتُفظ بالنسخة على الجهاز','offline');
+    console.error('Supabase save failed:',error);
+   }
+  }
+ })().finally(()=>{
+  cloudWriteRunning=false;
+  if(pendingCloudSnapshot)flushCloudWrites();
+ });
+ return cloudWriteQueue;
+}
+function queueCloudWrite(snapshot){
+ pendingCloudSnapshot=snapshot;
+ return flushCloudWrites();
+}
+async function save(){
+ if(!isAdmin){
+  db=loadLocal();renderAll();alert('هذه الخاصية متاحة للمسؤول فقط.');return false;
+ }
+ const snapshot=JSON.parse(JSON.stringify(db));
+ localBackup(snapshot);
+ renderAll();
+ setCloudStatus('تم الحفظ على الجهاز — جارٍ الحفظ السحابي...');
+ await queueCloudWrite(snapshot);
+ return !cloudLastError;
+}
+async function syncPendingToCloud(){
+ if(!isAdmin)return;
+ const snapshot=loadLocal();
+ setCloudStatus('عاد الاتصال — جارٍ مزامنة النسخة المحلية...');
+ await queueCloudWrite(snapshot);
+}
+window.addEventListener('online',syncPendingToCloud);
+window.addEventListener('offline',()=>setCloudStatus('لا يوجد اتصال — ستُحفظ التغييرات محلياً مؤقتاً','offline'));
+
+function openAdminLogin(){const box=document.getElementById('adminLoginBackdrop');box.classList.add('visible');box.setAttribute('aria-hidden','false');document.getElementById('adminLoginError').textContent='';document.getElementById('adminPasswordInput').value='';setTimeout(()=>document.getElementById('adminPasswordInput').focus(),50)}
+function closeAdminLogin(){const box=document.getElementById('adminLoginBackdrop');box.classList.remove('visible');box.setAttribute('aria-hidden','true')}
+function submitAdminLogin(){const value=document.getElementById('adminPasswordInput').value;if(value!==TEMP_ADMIN_PASSWORD){document.getElementById('adminLoginError').textContent='كلمة المرور غير صحيحة.';document.getElementById('adminPasswordInput').select();return}isAdmin=true;document.body.classList.add('admin-mode');document.getElementById('adminStatus').textContent='المسؤول: صلاحيات الإدارة';document.getElementById('adminAccessBtn').textContent='↪ تسجيل الخروج';document.getElementById('adminAccessBtn').onclick=logoutAdmin;closeAdminLogin();renderAll();if(!cloudReady){setCloudStatus('تم دخول المسؤول — جارٍ إعادة محاولة المزامنة...');save()}}
+function logoutAdmin(){isAdmin=false;db=loadLocal();document.body.classList.remove('admin-mode');document.getElementById('adminStatus').textContent='وضع المشاهدة';const b=document.getElementById('adminAccessBtn');b.textContent='🔐 دخول المسؤول';b.onclick=openAdminLogin;renderAll()}
+
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function current(){return db.tournaments.find(t=>t.id===db.active)||db.tournaments[0]||null}
+function getT(v){return db.tournaments.find(t=>t.id===v)}
+function pName(pid){return db.players.find(p=>p.id===pid)?.name||'لاعب'}
+function avatar(pid){let p=db.players.find(x=>x.id===pid);return p?.photo?`<img class="avatar" src="${p.photo}" alt="">`:`<span class="avatar">${esc((p?.name||'؟').slice(0,1))}</span>`}
+function showPage(p){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===p));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===p));({matches:renderMatches,standings:renderStandings,predictions:renderPredictions,stats:renderStats,news:renderNews,awards:renderAwards}[p]||(()=>{}))()}
+document.querySelectorAll('.nav button[data-page]').forEach(b=>b.onclick=()=>{showPage(b.dataset.page);closeMainMenu()});
+function toggleMainMenu(){const nav=document.getElementById('nav');const opening=!nav.classList.contains('menu-open');nav.classList.toggle('menu-open',opening);document.getElementById('sidebarBackdrop').classList.toggle('visible',opening);nav.setAttribute('aria-hidden',String(!opening));document.querySelector('.menu-trigger').setAttribute('aria-expanded',String(opening))}
+function closeMainMenu(){const nav=document.getElementById('nav');nav.classList.remove('menu-open');document.getElementById('sidebarBackdrop').classList.remove('visible');nav.setAttribute('aria-hidden','true');document.querySelector('.menu-trigger').setAttribute('aria-expanded','false')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMainMenu()});
+function renderAll(){renderHome();renderTournaments();renderPlayers();fillSelectors();renderMatches();renderStandings();renderPredictions();renderStats();renderNews();renderAwards()}
+function fillSelectors(){['matchTournament','standingTournament','statsTournament'].forEach(k=>{let s=document.getElementById(k),old=s.value;s.innerHTML=db.tournaments.map(t=>`<option value="${t.id}">${esc(t.name)}</option>`).join('')||'<option value="">لا توجد بطولة</option>';s.value=getT(old)?old:(current()?.id||'')});let t=getT(document.getElementById('standingTournament').value),g=document.getElementById('standingGroup'),old=g.value;g.innerHTML='<option value="all">كل المجموعات</option>'+(t?.groups||[]).map(x=>`<option value="${x.id}">${esc(x.name)}</option>`).join('');g.value=(t?.groups||[]).some(x=>x.id===old)?old:'all';let pp=document.getElementById('predictionPlayer'),op=pp.value;pp.innerHTML='<option value="">اختر اسمك</option>'+(current()?.participants||[]).map(pid=>`<option value="${pid}">${esc(pName(pid))}</option>`).join('');pp.value=(current()?.participants||[]).includes(op)?op:''}
+function renderHome(){let t=current(),ms=t?.matches||[],done=ms.filter(m=>m.status==='done');document.getElementById('homeStats').innerHTML=[['البطولات',db.tournaments.length,'🏆'],['المشاركون',t?.participants.length||0,'👥'],['المباريات',ms.length,'⚽'],['المكتملة',done.length,'✓']].map(a=>`<div class="card statcard"><small>${a[0]}</small><div class="stat">${a[1]}</div><span class="staticon">${a[2]}</span></div>`).join('');document.getElementById('activeTournament').innerHTML=t?`<div class="trophy-feature"><span>🏆</span><div><b>${esc(t.name)}</b><div class="muted">${esc(t.game)} • ${esc(t.system)}</div><div class="tournament-dates">تبدأ: ${esc(t.start||'غير محدد')}　•　تنتهي: ${esc(t.end||'غير محدد')}</div></div></div><p class="muted">${esc(t.description||'')}</p><button class="secondary small" onclick="showPage('tournaments')">عرض البطولة</button>`:'<div class="empty">ابدأ بإنشاء بطولتك الأولى</div>';document.getElementById('homeResults').innerHTML=done.slice(-4).reverse().map(matchLine).join('')||'<div class="empty">لا توجد نتائج مسجلة</div>';document.getElementById('homeUpcoming').innerHTML=ms.filter(m=>m.status!=='done').slice(0,4).map(matchLine).join('')||'<div class="empty">لا توجد مباريات قادمة</div>';document.getElementById('homeNews').innerHTML=(t?.news||[]).slice(0,2).map(n=>`<div class="news-card"><h3>${esc(n.title)}</h3>${esc(n.body.slice(0,220))}…</div>`).join('')||'<div class="empty">ستظهر التقارير بعد اكتمال الجولات</div>'}
+function matchLine(m){return `<div class="match-card"><div class="match-top"><b>${esc(m.aName||pName(m.aId))} <span class="vs">VS</span> ${esc(m.bName||pName(m.bId))}</b><span class="goldtxt">${m.status==='done'?`${esc(m.aName||pName(m.aId))} <bdi dir="ltr" lang="en" class="score-display">${toEnglishDigits(m.scoreA)} – ${toEnglishDigits(m.scoreB)}</bdi> ${esc(m.bName||pName(m.bId))}`:'قادمة'}</span></div><small>الجولة ${m.round} • ${esc(m.stageName||stageName(m.stage))}</small></div>`}
+function renderTournaments(){document.getElementById('tournamentList').innerHTML=db.tournaments.map(t=>`<div class="card"><div class="row between"><div><b>🏆 ${esc(t.name)}</b><div class="muted">${esc(t.game)} • ${esc(t.system)}</div></div><span class="badge">${t.participants.length} مشارك</span></div><div class="muted" style="margin-top:8px">الجوائز (${(t.awards||[]).length})</div>${(t.awards||[]).map(a=>`<div class="award-card"><b>${esc(a.name||'جائزة')}</b> — ${esc(a.value||'قيمة غير محددة')}<div class="muted">الفائز: ${esc(a.winnerName||'لم يُحدد بعد')}</div></div>`).join('')}<div class="actions" style="margin-top:11px"><button class="small" onclick="activateTournament('${t.id}')">${db.active===t.id?'✓ نشطة':'تفعيل'}</button><button class="secondary small" onclick="openTournamentForm('${t.id}')">تعديل</button><button class="secondary small" onclick="generateSchedule('${t.id}')">توليد الجدول</button><button class="danger small" onclick="deleteTournament('${t.id}')">حذف</button></div></div>`).join('')||'<div class="empty card">لا توجد بطولات. أنشئ بطولة جديدة للبدء.</div>'}
+function systemOptions(t){
+ const legacy=['مجموعات من دور واحد','مجموعات ذهاب وإياب'];
+ const options=SYSTEMS.map(g=>`<option value="${g}" ${t?.system===g?'selected':''}>${g}</option>`).join('');
+ return (t&&legacy.includes(t.system)?`<option value="${esc(t.system)}" selected disabled>نظام قديم محفوظ: ${esc(t.system)}</option>`:'')+options;
+}
+function awardEditorRows(awards=[]){return (awards.length?awards:[{}]).map((a,i)=>awardEditorRow(a,i)).join('')}
+function awardEditorRow(a={},i=0){
+ return `<div class="award-editor-row" data-award-id="${esc(a.id||id())}"><div class="field"><label>اسم الجائزة</label><input class="award-name" value="${esc(a.name||'')}" placeholder="مثال: المركز الأول"></div><div class="field"><label>القيمة</label><input class="award-value" value="${esc(a.value||'')}" placeholder="مثال: 10000 ريال"></div><div class="field"><label>الفائز (لاعب أو فريق)</label><input class="award-winner" value="${esc(a.winnerName||'')}" placeholder="اسم الفائز (اختياري)"></div><div class="field"><label>الحالة</label><select class="award-status-select"><option value="due" ${a.status==='due'?'selected':''}>مستحقة</option><option value="unpaid" ${!a.status||a.status==='unpaid'?'selected':''}>لم تُسلّم</option><option value="paid" ${a.status==='paid'?'selected':''}>تم التسليم</option></select><button type="button" class="danger small" onclick="this.closest('.award-editor-row').remove()">حذف</button></div></div>`;
+}
+function addAwardEditorRow(){document.getElementById('awardEditorRows').insertAdjacentHTML('beforeend',awardEditorRow({id:id()},Date.now()))}
+function readAwardEditorRows(){return [...document.querySelectorAll('#awardEditorRows .award-editor-row')].map(row=>({id:row.dataset.awardId||id(),name:row.querySelector('.award-name').value.trim(),value:row.querySelector('.award-value').value.trim(),winnerName:row.querySelector('.award-winner').value.trim(),status:row.querySelector('.award-status-select').value})).filter(a=>a.name||a.value||a.winnerName)}
+function openTournamentForm(tid=''){let t=getT(tid),sel=t?.participants||[],e=document.getElementById('tournamentEditor');e.classList.remove('hidden');e.innerHTML=`<h3>${t?'تعديل بيانات البطولة':'🏆 إنشاء بطولة جديدة'}</h3><div class="formgrid"><div class="field"><label>اسم البطولة</label><input id="tf_name" value="${esc(t?.name||'')}"></div><div class="field"><label>اللعبة</label><select id="tf_game">${GAMES.map(g=>`<option ${t?.game===g?'selected':''}>${g}</option>`).join('')}</select></div><div class="field"><label>نظام البطولة</label><select id="tf_system">${systemOptions(t)}</select></div><div class="field"><label>عدد المجموعات</label><select id="tf_groups">${[2,4,8].map(n=>`<option value="${n}" ${Number(t?.groupCount||2)===n?'selected':''}>${n} مجموعات</option>`).join('')}</select></div><div class="field"><label>نقاط الفوز</label><input id="tf_win" type="number" min="0" value="${t?.pointsWin??3}"></div><div class="field"><label>نقاط التعادل</label><input id="tf_draw" type="number" min="0" value="${t?.pointsDraw??1}"></div><div class="field"><label>تاريخ البداية</label><input id="tf_start" type="date" value="${t?.start||''}"></div><div class="field"><label>تاريخ النهاية</label><input id="tf_end" type="date" value="${t?.end||''}"></div><div class="field"><label>المنظم</label><input id="tf_org" value="${esc(t?.organizer||'')}"></div></div><div class="field"><label>وصف البطولة</label><textarea id="tf_desc">${esc(t?.description||'')}</textarea></div><div class="field"><div class="row between"><label>جوائز البطولة</label><button type="button" class="secondary small" onclick="addAwardEditorRow()">＋ إضافة جائزة</button></div><div id="awardEditorRows">${awardEditorRows(t?.awards||[])}</div></div><div class="field"><label>اختيار المشاركين</label><div>${db.players.map(p=>`<label class="player-chip"><input type="checkbox" class="tf_player" value="${p.id}" ${sel.includes(p.id)?'checked':''}>${esc(p.name)}</label>`).join('')||'أضف اللاعبين أولاً'}</div></div><div class="actions"><button onclick="saveTournament('${tid}')">حفظ البطولة</button><button class="secondary" onclick="closeBox('tournamentEditor')">إلغاء</button></div>`}
+function saveTournament(tid){let name=document.getElementById('tf_name').value.trim(),participants=[...document.querySelectorAll('.tf_player:checked')].map(x=>x.value);if(!name)return alert('اكتب اسم البطولة');if(participants.length<2)return alert('اختر لاعبين اثنين على الأقل');let old=getT(tid),system=document.getElementById('tf_system').value,groups=old?.groups||[];let obj={...(old||{}),id:old?.id||id(),name,game:document.getElementById('tf_game').value,system,groupCount:Number(document.getElementById('tf_groups').value),start:document.getElementById('tf_start').value,end:document.getElementById('tf_end').value,organizer:document.getElementById('tf_org').value,description:document.getElementById('tf_desc').value,participants,groups,awards:readAwardEditorRows(),matches:old?.matches||[],news:old?.news||[],predictions:old?.predictions||[],predictionWinners:old?.predictionWinners||[],pointsWin:Number(document.getElementById('tf_win').value),pointsDraw:Number(document.getElementById('tf_draw').value),stage:old?.stage||'main',knockoutStarted:old?.knockoutStarted||false};if(old)Object.assign(old,obj);else{db.tournaments.push(obj);db.active=obj.id}closeBox('tournamentEditor');save()}
+function activateTournament(tid){db.active=tid;save()}
+function deleteTournament(tid){if(!confirm('حذف البطولة وجميع بياناتها من هذا المتصفح؟'))return;db.tournaments=db.tournaments.filter(t=>t.id!==tid);if(db.active===tid)db.active=db.tournaments[0]?.id||null;save()}
+function closeBox(x){document.getElementById(x).classList.add('hidden')}
+function renderAwards(){
+ const box=document.getElementById('awardsList');if(!box)return;
+ const items=db.tournaments.flatMap(t=>(t.awards||[]).map(a=>({t,a})));
+ box.innerHTML=items.map(({t,a})=>`<div class="award-card"><h4>🎖️ ${esc(a.name||'جائزة')}</h4><div><b>البطولة:</b> ${esc(t.name)}</div><div><b>القيمة:</b> ${esc(a.value||'غير محددة')}</div><div><b>الفائز:</b> ${esc(a.winnerName||'لم يُحدد بعد')}</div><div style="margin-top:7px"><span class="award-status ${a.status==='paid'?'paid':''}">${a.status==='paid'?'تم التسليم':a.status==='due'?'مستحقة':'لم تُسلّم'}</span></div><div class="actions" style="margin-top:8px"><button class="secondary small" onclick="setAwardStatus('${t.id}','${a.id}','${a.status==='paid'?'unpaid':'paid'}')">${a.status==='paid'?'إلغاء التسليم':'تأكيد التسليم'}</button></div></div>`).join('')||'<div class="empty card">لا توجد جوائز مسجلة في البطولات حتى الآن.</div>';
+}
+function setAwardStatus(tid,aid,status){let t=getT(tid),a=t?.awards?.find(x=>x.id===aid);if(!a)return;a.status=status;save()}
+function renderPlayers(){document.getElementById('playerList').innerHTML=db.players.map(p=>`<div class="card row between">${avatar(p.id)}<b style="flex:1">${esc(p.name)}</b><div class="actions"><button class="secondary small" onclick="openPlayerForm('${p.id}')">تعديل</button><button class="danger small" onclick="deletePlayer('${p.id}')">حذف</button></div></div>`).join('')||'<div class="empty">أضف اللاعبين أولاً</div>'}
+function openPlayerForm(pid=''){let p=db.players.find(x=>x.id===pid),e=document.getElementById('playerEditor');e.classList.remove('hidden');e.innerHTML=`<h3>${p?'تعديل لاعب':'إضافة لاعب جديد'}</h3><div class="formgrid"><div class="field"><label>اسم اللاعب</label><input id="pf_name" value="${esc(p?.name||'')}"></div><div class="field"><label>صورة اللاعب (اختياري)</label><input id="pf_photo" type="file" accept="image/*"></div></div><div class="actions"><button onclick="savePlayer('${pid}')">حفظ</button><button class="secondary" onclick="closeBox('playerEditor')">إلغاء</button></div>`}
+function savePlayer(pid){let name=document.getElementById('pf_name').value.trim(),file=document.getElementById('pf_photo').files[0];if(!name)return alert('اكتب اسم اللاعب');let p=db.players.find(x=>x.id===pid);const done=photo=>{if(p){p.name=name;if(photo)p.photo=photo}else db.players.push({id:id(),name,photo:photo||''});closeBox('playerEditor');save()};if(file){let r=new FileReader();r.onload=()=>done(r.result);r.readAsDataURL(file)}else done(null)}
+function deletePlayer(pid){if(db.tournaments.some(t=>t.participants.includes(pid)))return alert('اللاعب مشارك في بطولة. أزله منها أولاً.');if(confirm('حذف اللاعب؟')){db.players=db.players.filter(p=>p.id!==pid);save()}}
+function stageName(s){return s==='groups'?'مرحلة المجموعات':s==='knockout'?'الأدوار الإقصائية':s==='league'?'الدور الرئيسي':s||'الدور الرئيسي'}
+function addMatch(t,a,b,round,stage,groupId='',name='',extra={}){let m={id:id(),aId:a,bId:b,aName:pName(a),bName:pName(b),round,stage,stageName:name||stageName(stage),groupId,status:'upcoming',scoreA:null,scoreB:null,winnerId:null,...extra};t.matches.push(m);return m}
+function roundRobin(t,ids,stage,groupId='',homeAway=false){
+ let rotation=[...ids];if(rotation.length%2)rotation.push(null);let n=rotation.length;if(n<2)return;
+ let roundCount=n-1,firstLegs=[];
+ for(let r=0;r<roundCount;r++){
+  let pairs=[];for(let i=0;i<n/2;i++){let a=rotation[i],b=rotation[n-1-i];if(a&&b)pairs.push([a,b])}
+  firstLegs.push(pairs);rotation.splice(1,0,rotation.pop());
+ }
+ // جميع مباريات الذهاب أولاً، ثم جميع مباريات الإياب بالترتيب نفسه.
+ firstLegs.forEach((pairs,r)=>pairs.forEach(([a,b])=>addMatch(t,a,b,r+1,stage,groupId,'',{leg:homeAway?1:undefined,homeAway:!!homeAway})));
+ if(homeAway)firstLegs.forEach((pairs,r)=>pairs.forEach(([a,b])=>addMatch(t,b,a,roundCount+r+1,stage,groupId,'',{leg:2,homeAway:true})));
+}
+function generateSchedule(tid){let t=getT(tid);if(!t)return;if(t.matches.length&&!confirm('سيتم استبدال جدول البطولة ونتائجها وتوقعاتها. هل تتابع؟'))return;t.matches=[];t.news=[];t.predictions=[];t.predictionWinners=[];t.knockoutStarted=false;t.championId=null;let ids=[...t.participants],s=t.system,ha=s.includes('ذهاب وإياب');
+ if(s==='مجموعات من دور واحد'||s==='مجموعات ذهاب وإياب')return alert('هذا نظام قديم محفوظ للبطولات السابقة ولا يمكن إنشاء جدول جديد به. اختر نظاماً متاحاً.');
+ if(s.startsWith('دوري'))roundRobin(t,ids,'league','',ha);else if(s.startsWith('مجموعات')){let n=t.groupCount||2;if(ids.length<n*2)return alert('عدد المشاركين لا يكفي: تحتاج لاعبين اثنين على الأقل لكل مجموعة.');t.groups=Array.from({length:n},(_,i)=>({id:id(),name:'المجموعة '+String.fromCharCode(65+i),players:ids.filter((_,j)=>j%n===i)}));t.groups.forEach(g=>roundRobin(t,g.players,'groups',g.id,ha));t.stage='groups'}else if(s.startsWith('خروج مغلوب')){t.groups=[];createKnockout(t,ids,ha)}else return alert('نظام البطولة غير معروف');save();alert('تم إنشاء جدول المباريات بنجاح')}
+function roundLabel(size){if(size===2)return'النهائي';if(size===4)return'نصف النهائي';if(size===8)return'ربع النهائي';if(size===16)return'دور الـ16';return'دور '+size}
+function createKnockout(t,ids,homeAway=false){
+ ids=ids.filter(Boolean);if(ids.length<2)return;
+ if(new Set(ids).size!==ids.length){t.knockoutError='تعذر إنشاء الإقصائيات: يوجد لاعب مكرر في قائمة المتأهلين. لم يتم إنشاء أي مواجهة.';return;}
+ let size=1;while(size<ids.length)size*=2;
+ let byes=size-ids.length,round=1,label=roundLabel(size),pairings=[];
+ for(let i=0;i<byes;i++){
+  let pid=ids[i];t.matches.push({id:id(),aId:pid,bId:null,aName:pName(pid),bName:'تأهل تلقائي',round,stage:'knockout',stageName:label,status:'done',scoreA:0,scoreB:0,winnerId:pid,bye:true});
+ }
+ let remaining=ids.slice(byes);
+ for(let i=0;i<remaining.length;i+=2){let a=remaining[i],b=remaining[i+1];if(!b)continue;if(a===b){t.knockoutError='تم إيقاف إنشاء الجدول لأن اللاعب نفسه ظهر طرفاً في المواجهة. راجع قائمة المتأهلين.';return}pairings.push([a,b,homeAway?id():null])}
+ // في الذهاب والإياب تُعرض كل مباريات الذهاب أولاً، ثم كل مباريات الإياب.
+ let roundHomeAway=!!homeAway&&label!=='النهائي';
+ pairings.forEach(([a,b,tie])=>addMatch(t,a,b,round,'knockout','',label,{tieId:roundHomeAway?tie:null,leg:roundHomeAway?1:undefined,homeAway:roundHomeAway}));
+ if(roundHomeAway)pairings.forEach(([a,b,tie])=>addMatch(t,b,a,round,'knockout','',label,{tieId:tie,leg:2,homeAway:true}));
+ t.knockoutRound=round;t.knockoutHomeAway=!!homeAway;advanceKnockoutIfReady(t);
+}
+function tieMatches(t,tieId){return t.matches.filter(m=>m.tieId===tieId)}
+function tieTotals(t,tieId){let legs=tieMatches(t,tieId);if(!legs.length)return null;let first=legs[0].aId,second=legs[0].bId,totals={[first]:0,[second]:0};legs.forEach(x=>{totals[x.aId]=(totals[x.aId]||0)+Number(x.scoreA||0);totals[x.bId]=(totals[x.bId]||0)+Number(x.scoreB||0)});return{first,second,firstScore:totals[first]||0,secondScore:totals[second]||0}}
+function tieStatus(t,m){
+ if(!m.tieId)return m.status==='done'?m.winnerId:null;
+ let legs=tieMatches(t,m.tieId);if(legs.length!==2||!legs.every(x=>x.status==='done'||x.status==='pending_tie_decision'))return null;
+ let z=tieTotals(t,m.tieId);
+ if(z.firstScore===z.secondScore){let decision=legs.find(x=>x.tieDecision&&x.winnerId);return decision?.winnerId||'draw'}
+ return z.firstScore>z.secondScore?z.first:z.second;
+}
+function matchComplete(t,m){
+ if(m.bye)return true;
+ if(m.tieId){let legs=tieMatches(t,m.tieId);return legs.length===2&&legs.every(x=>x.status==='done'||x.status==='pending_tie_decision')&&!!tieStatus(t,m)}
+ return m.status==='done'&&!!m.winnerId;
+}
+function updateTieWinner(t,tieId,pid){let legs=tieMatches(t,tieId);legs.forEach(m=>{m.winnerId=pid;m.status='done';m.tieDecision=true})}
+function toEnglishDigits(value){
+ const map={'٠':'0','١':'1','٢':'2','٣':'3','٤':'4','٥':'5','٦':'6','٧':'7','٨':'8','٩':'9','۰':'0','۱':'1','۲':'2','۳':'3','۴':'4','۵':'5','۶':'6','۷':'7','۸':'8','۹':'9'};
+ return String(value??'').replace(/[٠-٩۰-۹]/g,ch=>map[ch]).replace(/[^0-9]/g,'');
+}
+function normalizeScoreInput(input){
+ const map={'٠':'0','١':'1','٢':'2','٣':'3','٤':'4','٥':'5','٦':'6','٧':'7','٨':'8','٩':'9','۰':'0','۱':'1','۲':'2','۳':'3','۴':'4','۵':'5','۶':'6','۷':'7','۸':'8','۹':'9'};
+ const normalized=String(input.value??'').replace(/[٠-٩۰-۹]/g,ch=>map[ch]).replace(/[^0-9]/g,'').slice(0,3);
+ if(input.value!==normalized)input.value=normalized;
+ input.setAttribute('lang','en');input.setAttribute('dir','ltr');
+}
+function autoSaveMatchScore(tid,mid){
+ const av=document.getElementById('sa_'+mid)?.value??'';
+ const bv=document.getElementById('sb_'+mid)?.value??'';
+ // لا نحفظ نتيجة جزئية؛ يتم الحفظ فقط بعد إدخال هدفي الطرفين.
+ if(av===''||bv==='')return;
+ if(!/^[0-9]{1,3}$/.test(av)||!/^[0-9]{1,3}$/.test(bv))return;
+ recordMatchScore(tid,mid);
+}
+function recordMatchScore(tid,mid){
+ let t=getT(tid),m=t?.matches.find(x=>x.id===mid);if(!m)return;
+ let av=document.getElementById('sa_'+mid)?.value,bv=document.getElementById('sb_'+mid)?.value;
+ if(av===''||bv===''){m.scoreA=null;m.scoreB=null;m.status='upcoming';m.winnerId=null;save();return}
+ let a=Number(av),b=Number(bv);if(!Number.isInteger(a)||!Number.isInteger(b)||a<0||b<0)return alert('أدخل أرقاماً صحيحة غير سالبة');
+ m.scoreA=a;m.scoreB=b;m.status='done';m.winnerId=a===b?null:(a>b?m.aId:m.bId);m.tieDecision=false;m.updatedAt=new Date().toISOString();
+ if(m.stage==='knockout'&&!m.tieId&&a===b){let win=document.getElementById('winner_'+mid)?.value;if(!win){m.status='pending_winner';save();return alert(m.stageName==='النهائي'?'تعادل في النهائي. اختر الفائز بعد الأشواط الإضافية أو ركلات الترجيح.':'تعادل في مباراة إقصائية واحدة. اختر الفائز بعد الحسم.')}m.winnerId=win;m.status='done'}
+ if(m.tieId){
+  let legs=tieMatches(t,m.tieId);
+  if(legs.length===2&&legs.every(x=>x.scoreA!==null&&x.scoreA!==undefined&&x.scoreB!==null&&x.scoreB!==undefined)){
+   legs.forEach(x=>{x.status='done'});let z=tieTotals(t,m.tieId);
+   if(z.firstScore!==z.secondScore){let winner=z.firstScore>z.secondScore?z.first:z.second;legs.forEach(x=>{x.winnerId=winner;x.tieDecision=false})}
+   else legs.forEach(x=>{x.winnerId=null;x.status='pending_tie_decision';x.tieDecision=false});
+  }
+ }
+ processAllCompletedRounds(t);if(m.stage==='knockout')advanceKnockoutIfReady(t);save();
+}
+function decideTie(tid,tieId,pid){let t=getT(tid),legs=t?.matches.filter(x=>x.tieId===tieId);if(!legs?.length)return;let valid=[legs[0].aId,legs[0].bId];if(!valid.includes(pid))return alert('اختر أحد طرفي المواجهة');updateTieWinner(t,tieId,pid);processAllCompletedRounds(t);advanceKnockoutIfReady(t);save()}
+function setKnockoutWinner(tid,mid,pid){let t=getT(tid),m=t?.matches.find(x=>x.id===mid);if(!m||!pid)return;if(m.scoreA===m.scoreB){m.winnerId=pid;m.status='done';processAllCompletedRounds(t);advanceKnockoutIfReady(t);save()}}
+function advanceKnockoutIfReady(t){
+ let round=t.knockoutRound||1,current=t.matches.filter(m=>m.stage==='knockout'&&m.round===round);if(!current.length)return;
+ let units=[],seen=new Set();for(let m of current){let key=m.tieId||m.id;if(seen.has(key))continue;seen.add(key);units.push(m)}
+ if(!units.every(m=>matchComplete(t,m)))return;
+ let winners=[];for(let m of units){let w=m.tieId?tieStatus(t,m):m.winnerId;if(!w||w==='draw')return;winners.push(w)}
+ if(new Set(winners).size!==winners.length){t.knockoutError='تكرار لاعب في أكثر من مواجهة بالدور نفسه. أعد بناء جدول الإقصائيات.';return}
+ if(winners.length===1){t.championId=winners[0];t.stage='completed';return}
+ let next=round+1;if(t.matches.some(m=>m.stage==='knockout'&&m.round===next)){t.knockoutRound=next;advanceKnockoutIfReady(t);return}
+ let label=roundLabel(winners.length),homeAway=!!t.knockoutHomeAway&&label!=='النهائي',pairings=[];
+ for(let i=0;i<winners.length;i+=2){let a=winners[i],b=winners[i+1];if(!b){t.matches.push({id:id(),aId:a,bId:null,aName:pName(a),bName:'تأهل تلقائي',round:next,stage:'knockout',stageName:label,status:'done',scoreA:0,scoreB:0,winnerId:a,bye:true});continue}if(a===b){t.knockoutError='تم إيقاف إنشاء مواجهة مكررة للاعب نفسه.';return}pairings.push([a,b,homeAway?id():null])}
+ pairings.forEach(([a,b,tie])=>addMatch(t,a,b,next,'knockout','',label,{tieId:homeAway?tie:null,leg:homeAway?1:undefined,homeAway}));
+ if(homeAway)pairings.forEach(([a,b,tie])=>addMatch(t,b,a,next,'knockout','',label,{tieId:tie,leg:2,homeAway:true}));
+ t.knockoutRound=next;advanceKnockoutIfReady(t);
+}
+function processAllCompletedRounds(t){let buckets=new Map();t.matches.forEach(m=>{let k=m.stage+'_'+m.round;if(!buckets.has(k))buckets.set(k,[]);buckets.get(k).push(m)});for(let [k,all] of buckets){if(!all.length||!all.every(m=>m.status==='done'))continue;let key='round_'+k;if((t.news||[]).some(n=>n.key===key))continue;let r=generateRoundReport(t,all,all[0].round,all[0].stage);t.news=t.news||[];t.news.unshift({id:id(),key,title:r.title,body:r.body,date:new Date().toLocaleDateString('ar')});checkPredictions(t,all[0].round,all)}if(t.system.includes('ثم خروج مغلوب'))maybeStartGroupKnockout(t)}
+function generateRoundReport(t,list,round,stage){let goals=list.reduce((s,m)=>s+Number(m.scoreA||0)+Number(m.scoreB||0),0),lines=list.map(m=>{let a=Number(m.scoreA),b=Number(m.scoreB),an=m.aName||pName(m.aId),bn=m.bName||pName(m.bId),out=a>b?`تفوق ${an} وخرج بالانتصار`:b>a?`حسم ${bn} المواجهة لمصلحته`:'فرض التعادل نفسه على الطرفين',analysis=a===b?'تقاسم الطرفان النتيجة بعد مواجهة متوازنة، وبقيت الأفضلية متقاربة حتى صافرة النهاية.':Math.abs(a-b)>=3?'ظهر فارق واضح في الأداء والنتيجة، ونجح الفائز في استثمار فرصه وفرض إيقاعه.':'جاءت المواجهة متقاربة، وحُسمت بتفاصيل صغيرة وتركيز أكبر في اللحظات الحاسمة.';return `● ${an} ${a} – ${b} ${bn}\n${out}. ${analysis} ${stage==='groups'?'وتدخل النتيجة في حسابات المجموعة وفارق النتائج.':stage==='knockout'?'وتؤثر النتيجة في طريق العبور إلى الدور التالي.':'وتنعكس النتيجة على جدول الترتيب وحسابات المنافسة.'}`}).join('\n\n');return{title:`حصاد الجولة ${round} | ${t.name}`,body:`أُسدل الستار على الجولة ${round} من ${stageName(stage)} في بطولة ${t.name}، بعد اكتمال ${list.length} مواجهة، وبإجمالي ${goals} هدفاً/نقطة مسجلة.\n\n${lines}\n\nقراءة الجولة: اكتملت نتائج هذه الجولة على مستوى البطولة، وستنعكس على الترتيب والإحصائيات وحسابات التأهل. الأنظار تتجه الآن إلى الجولة المقبلة، حيث تتجدد المنافسة وتزداد أهمية كل نتيجة.`}}
+function maybeStartGroupKnockout(t){
+ if(!t.system.includes('ثم خروج مغلوب')||t.knockoutStarted)return;
+ // إذا كان هناك جدول إقصائي موجود، لا نحذفه ولا نعيد توليده تلقائياً.
+ if((t.matches||[]).some(m=>m.stage==='knockout')){t.knockoutStarted=true;return}
+ let ms=t.matches.filter(m=>m.stage==='groups');if(!ms.length||!ms.every(m=>m.status==='done'))return;
+ let qs=[];for(let g of t.groups||[]){let rows=calcStandings(t,g.id);if(rows.length>=2)qs.push({group:g,first:rows[0].id,second:rows[1].id})}
+ if(qs.length<2)return;
+ let seeds=[];for(let i=0;i<qs.length;i+=2){let a=qs[i],b=qs[i+1];if(!b)return;seeds.push(a.first,b.second,a.second,b.first)}
+ let expected=qs.length*2;if(seeds.length!==expected||new Set(seeds).size!==seeds.length){t.knockoutError='تعذر بدء الإقصائيات: قائمة المتأهلين تحتوي على تكرار أو عدد غير مكتمل.';return}
+ t.knockoutStarted=true;t.knockoutRound=1;t.knockoutHomeAway=t.system.includes('ذهاب وإياب');createKnockout(t,seeds,t.knockoutHomeAway);
+}
+function renderMatches(){
+ let t=getT(document.getElementById('matchTournament')?.value)||current(),el=document.getElementById('matchList');if(!t){el.innerHTML='<div class="empty">أنشئ بطولة أولاً</div>';return}
+ let f=document.getElementById('matchFilter').value,arr=t.matches.filter(m=>f==='all'||(f==='done'?m.status==='done':m.status!=='done'));
+ // الترتيب الرقمي للجولات يضمن عرض الذهاب كاملاً قبل الإياب حتى في الجداول القديمة.
+ arr.sort((a,b)=>((a.stage==='knockout'?1:0)-(b.stage==='knockout'?1:0))||(Number(a.round)||0)-(Number(b.round)||0)||(Number(a.leg||1)-Number(b.leg||1))||String(a.groupId||'').localeCompare(String(b.groupId||'')));
+ let groups={};arr.forEach(m=>{let key=(m.stageName||stageName(m.stage))+' — الجولة '+m.round+(m.groupId?' — '+(t.groups.find(g=>g.id===m.groupId)?.name||''):'');(groups[key]??=[]).push(m)});
+ el.innerHTML=Object.entries(groups).map(([h,ms])=>`<section class="round-group"><div class="round-title">${esc(h)}</div>${ms.map(m=>matchCard(t,m)).join('')}</section>`).join('')||'<div class="empty">لا توجد مباريات في هذا التصنيف</div>';
+}
+function matchCard(t,m){
+ let a=m.aName||pName(m.aId),b=m.bName||pName(m.bId);
+ let score=m.status==='done'?`<bdi dir="ltr" lang="en" class="score-display">${toEnglishDigits(m.scoreA)} - ${toEnglishDigits(m.scoreB)}</bdi>`:m.status==='pending_winner'?'بانتظار حسم الفائز':m.status==='pending_tie_decision'?'تعادل مجموع المباراتين — الحسم مطلوب':'لم تلعب';
+ let inputs=m.bId?`<div class="fixture-main">
+  <div class="fixture-team home"><div class="fixture-player">${avatar(m.aId)}<b>${esc(a)}</b></div><input class="score-input" id="sa_${m.id}" data-player="${esc(a)}" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="3" lang="en" dir="ltr" autocomplete="off" oninput="normalizeScoreInput(this)" onblur="autoSaveMatchScore('${t.id}','${m.id}')" placeholder="0" value="${toEnglishDigits(m.scoreA??'')}" aria-label="أهداف ${esc(a)}"></div>
+  <div class="fixture-vs">VS</div>
+  <div class="fixture-team away"><input class="score-input" id="sb_${m.id}" data-player="${esc(b)}" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="3" lang="en" dir="ltr" autocomplete="off" oninput="normalizeScoreInput(this)" onblur="autoSaveMatchScore('${t.id}','${m.id}')" placeholder="0" value="${toEnglishDigits(m.scoreB??'')}" aria-label="أهداف ${esc(b)}"><div class="fixture-player"><b>${esc(b)}</b>${avatar(m.bId)}</div></div>
+ </div>`:'<span class="badge">تأهل تلقائي</span>';
+ let decision='';
+ if(m.tieId&&m.status==='pending_tie_decision'&&tieMatches(t,m.tieId)[0]?.id===m.id){
+  let leg=tieMatches(t,m.tieId)[0];
+  decision=`<div class="notice">تعادل مجموع الذهاب والإياب. لا توجد قاعدة أهداف خارج الأرض. اختر المتأهل بعد الحسم.</div><div class="row"><select id="dec_${m.tieId}"><option value="">اختر المتأهل</option><option value="${leg.aId}">${esc(pName(leg.aId))}</option><option value="${leg.bId}">${esc(pName(leg.bId))}</option></select><button class="small" onclick="decideTie('${t.id}','${m.tieId}',document.getElementById('dec_${m.tieId}').value)">اعتماد التأهل</button></div>`;
+ }else if(m.stage==='knockout'&&!m.tieId&&m.status==='pending_winner'){
+  decision=`<div class="row"><select id="winner_${m.id}"><option value="">اختر الفائز بعد الأشواط الإضافية أو الترجيح</option><option value="${m.aId}">${esc(a)}</option><option value="${m.bId}">${esc(b)}</option></select><button class="small" onclick="setKnockoutWinner('${t.id}','${m.id}',document.getElementById('winner_${m.id}').value)">اعتماد الفائز</button></div>`;
+ }
+ return `<div class="fixture-card"><div class="fixture-main-wrap">${inputs}</div><div class="fixture-tools"><div class="match-meta">${esc(m.stageName||stageName(m.stage))} • ${score} ${m.homeAway&&m.leg?` • ${m.leg===1?'مباراة الذهاب':'مباراة الإياب'}`:''} ${m.winnerId?' • الفائز: '+esc(pName(m.winnerId)):''}</div></div>${decision}</div>`
+}
+function openManualMatch(){let t=getT(document.getElementById('matchTournament').value)||current();if(!t)return alert('أنشئ بطولة أولاً');let opts=t.participants.map(pid=>`<option value="${pid}">${esc(pName(pid))}</option>`).join(''),box=document.getElementById('manualMatch');box.classList.remove('hidden');box.innerHTML=`<h3>إضافة مباراة يدوية</h3><div class="formgrid"><div class="field"><label>اللاعب الأول</label><select id="mm_a">${opts}</select></div><div class="field"><label>اللاعب الثاني</label><select id="mm_b">${opts}</select></div><div class="field"><label>الجولة</label><input id="mm_round" type="number" min="1" value="1"></div><div class="field"><label>المرحلة</label><select id="mm_stage"><option value="league">الدور الرئيسي</option><option value="groups">المجموعات</option><option value="knockout">الأدوار الإقصائية</option></select></div></div><button onclick="saveManualMatch('${t.id}')">إضافة المباراة</button> <button class="secondary" onclick="closeBox('manualMatch')">إلغاء</button>`}
+function saveManualMatch(tid){let t=getT(tid),a=document.getElementById('mm_a').value,b=document.getElementById('mm_b').value;if(!a||!b||a===b)return alert('اختر لاعبين مختلفين');addMatch(t,a,b,Number(document.getElementById('mm_round').value)||1,document.getElementById('mm_stage').value);closeBox('manualMatch');save()}
+function calcStandings(t,gid=null){
+ let ids=gid?(t.groups?.find(g=>g.id===gid)?.players||[]):(t.participants||[]);
+ let map=new Map(ids.map(pid=>[pid,{id:pid,name:pName(pid),played:0,w:0,d:0,l:0,for:0,against:0,points:0}]));
+ (t.matches||[]).filter(m=>m.status==='done'&&m.stage!=='knockout'&&(!gid||m.groupId===gid)&&m.bId&&m.aId!==m.bId).forEach(m=>{
+  const a=map.get(m.aId), b=map.get(m.bId);
+  if(!a||!b||m.scoreA===null||m.scoreA===undefined||m.scoreB===null||m.scoreB===undefined)return;
+  const scoreA=Number(m.scoreA), scoreB=Number(m.scoreB);
+  if(!Number.isFinite(scoreA)||!Number.isFinite(scoreB)||scoreA<0||scoreB<0)return;
+  // قاعدة ثابتة: scoreA تخص اللاعب aId، وscoreB تخص اللاعب bId، حتى في مباراة الإياب.
+  a.played+=1; b.played+=1;
+  a.for+=scoreA; a.against+=scoreB;
+  b.for+=scoreB; b.against+=scoreA;
+  if(scoreA>scoreB){a.w+=1;b.l+=1;a.points+=Number(t.pointsWin??3)}
+  else if(scoreA<scoreB){b.w+=1;a.l+=1;b.points+=Number(t.pointsWin??3)}
+  else{a.d+=1;b.d+=1;a.points+=Number(t.pointsDraw??1);b.points+=Number(t.pointsDraw??1)}
+ });
+ return [...map.values()].map(x=>({...x,diff:x.for-x.against})).sort((a,b)=>b.points-a.points||b.w-a.w||b.diff-a.diff||b.for-a.for||a.name.localeCompare(b.name,'ar'));
+}
+function tableHtml(rows){
+ return `<div class="compact-table-wrap"><table class="compact-table"><thead><tr><th>م</th><th>اللاعب</th><th>لعب</th><th>فوز</th><th>تعادل</th><th>خسارة</th><th>له</th><th>عليه</th><th>الفارق</th><th>نقاط</th></tr></thead><tbody>${rows.map((r,i)=>`<tr><td>${i+1}</td><td class="player-cell">${esc(r.name)}</td><td>${r.played}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td>${r.for}</td><td>${r.against}</td><td>${r.diff>0?'+':''}${r.diff}</td><td><b>${r.points}</b></td></tr>`).join('')||'<tr><td colspan="10">لا توجد بيانات</td></tr>'}</tbody></table></div>`
+}
+function footballGoalStats(t){
+ let map=new Map((t.participants||[]).map(pid=>[pid,{id:pid,name:pName(pid),played:0,goals:0,conceded:0}]));
+ (t.matches||[]).filter(m=>m.bId&&m.scoreA!==null&&m.scoreA!==undefined&&m.scoreB!==null&&m.scoreB!==undefined&&['done','pending_tie_decision','pending_winner'].includes(m.status)).forEach(m=>{
+  let a=map.get(m.aId),b=map.get(m.bId);if(!a||!b)return;
+  let x=Number(m.scoreA),y=Number(m.scoreB);if(!Number.isFinite(x)||!Number.isFinite(y))return;
+  a.played++;b.played++;a.goals+=x;a.conceded+=y;b.goals+=y;b.conceded+=x;
+ });
+ return [...map.values()].filter(x=>x.played>0).map(x=>({...x,goalAvg:x.goals/x.played,concedeAvg:x.conceded/x.played}));
+}
+function goalTable(rows,kind){
+ let isScorer=kind==='scorers',valueKey=isScorer?'goals':'conceded',avgKey=isScorer?'goalAvg':'concedeAvg';
+ let sorted=[...rows].sort((a,b)=>isScorer?(b[valueKey]-a[valueKey]||b[avgKey]-a[avgKey]):(a[valueKey]-b[valueKey]||a[avgKey]-b[avgKey]));
+ return `<div class="compact-table-wrap"><table class="goal-table"><thead><tr><th>اللاعب</th><th>المباريات</th><th>${isScorer?'الأهداف':'تلقي الأهداف'}</th><th>${isScorer?'معدل الأهداف':'معدل تلقي الأهداف'}</th></tr></thead><tbody>${sorted.map(r=>`<tr><td><b>${esc(r.name)}</b></td><td>${r.played}</td><td>${r[valueKey]}</td><td>${r[avgKey].toFixed(2)}</td></tr>`).join('')||'<tr><td colspan="4">لا توجد نتائج مسجلة بعد</td></tr>'}</tbody></table></div>`
+}
+function renderStandings(){
+ let t=getT(document.getElementById('standingTournament').value)||current(),box=document.getElementById('standingsTable');
+ if(!t){box.innerHTML='<div class="empty">لا توجد بطولة</div>';return}
+ let g=document.getElementById('standingGroup'),old=g.value;
+ g.innerHTML='<option value="all">كل المجموعات</option>'+(t.groups||[]).map(x=>`<option value="${x.id}">${esc(x.name)}</option>`).join('');
+ g.value=(t.groups||[]).some(x=>x.id===old)?old:'all';
+ let selected=g.value,standings='';
+ if(t.groups?.length&&selected==='all')standings=t.groups.map(gr=>`<h3 style="margin:12px 0 7px;color:#087f9c">${esc(gr.name)}</h3>${tableHtml(calcStandings(t,gr.id))}`).join('');
+ else standings=tableHtml(calcStandings(t,selected==='all'?null:selected));
+ let goalBlock='';
+ if(t.game==='كرة القدم بالأصابع'){
+  let stats=footballGoalStats(t);
+  goalBlock=`<div class="goal-tables"><section class="goal-panel"><h3>🥇 الهدافون</h3>${goalTable(stats,'scorers')}</section><section class="goal-panel"><h3>🛡️ المدافعون</h3>${goalTable(stats,'defenders')}</section></div>`;
+ }
+ box.innerHTML=standings+goalBlock;
+ let ks=t.matches.filter(m=>m.stage==='knockout'),rounds=[...new Set(ks.map(m=>m.round))].sort((a,b)=>a-b);
+ document.getElementById('bracketView').innerHTML=ks.length?rounds.map(r=>`<h3 class="goldtxt">الجولة الإقصائية ${r}</h3>`+ks.filter(m=>m.round===r).map(m=>{const a=m.aName||pName(m.aId),b=m.bName||pName(m.bId);const sa=m.scoreA==null?'—':toEnglishDigits(m.scoreA),sb=m.scoreB==null?'—':toEnglishDigits(m.scoreB);return `<div class="match-card"><b>${esc(m.stageName)}</b><div class="bracket-scoreline" dir="rtl"><span class="bracket-team">${esc(a)}</span><bdi dir="ltr" lang="en" class="score-display bracket-score">${sa}</bdi><span class="bracket-separator">:</span><bdi dir="ltr" lang="en" class="score-display bracket-score">${sb}</bdi><span class="bracket-team">${esc(b)}</span></div><small>${m.winnerId?'المتأهل: '+esc(pName(m.winnerId)):m.status==='pending_tie_decision'?'تعادل المجموع — بانتظار الحسم':'لم تحسم بعد'}</small></div>`}).join('')).join('')+(t.championId?`<div class="notice">🏆 بطل البطولة: <b>${esc(pName(t.championId))}</b></div>`:''):'<div class="empty">سيظهر المسار بعد توليد جدول الإقصائيات أو اكتمال المجموعات</div>';
+ if(t.knockoutError)document.getElementById('bracketView').insertAdjacentHTML('afterbegin',`<div class="notice">${esc(t.knockoutError)}</div>`);
+}
+function nextPredictionRound(t){let active=t.matches.filter(m=>m.status!=='done'&&m.stage!=='knockout');if(!active.length)active=t.matches.filter(m=>m.status!=='done'&&m.stage==='knockout');if(!active.length)return null;let stage=active[0].stage,round=Math.min(...active.filter(m=>m.stage===stage).map(m=>Number(m.round)||1));let matches=active.filter(m=>m.stage===stage&&Number(m.round)===round);return{stage,round,matches}}
+function renderPredictions(){let t=current(),box=document.getElementById('predictionRound');if(!t){box.innerHTML='<div class="empty">لا توجد بطولة نشطة</div>';return}let n=nextPredictionRound(t);if(!n){box.innerHTML='<div class="empty">لا توجد جولة قادمة متاحة للتوقع</div>';document.getElementById('predictionWinners').innerHTML=(t.predictionWinners||[]).map(w=>winnerLine(w)).join('')||'<div class="empty">لا يوجد فائزون بعد</div>';return}box.innerHTML=`<h3 class="goldtxt">توقع ${stageName(n.stage)} • الجولة ${n.round}</h3><p class="muted">اكتب النتيجة الرقمية لكل مواجهة. ستظهر مباريات جميع المجموعات في الجولة نفسها.</p>`+n.matches.map(m=>`<div class="prediction-match"><span>${esc(m.aName)} <small>ضد</small> ${esc(m.bName)}${m.leg?` <small>(${m.leg===1?'ذهاب':'إياب'})</small>`:''}</span><input id="pa_${m.id}" type="number" min="0" placeholder="0"><input id="pb_${m.id}" type="number" min="0" placeholder="0"></div>`).join('');document.getElementById('submitPrediction').disabled=false;document.getElementById('predictionWinners').innerHTML=(t.predictionWinners||[]).map(w=>winnerLine(w)).join('')||'<div class="empty">لم يفز أحد بالجائزة حتى الآن</div>'}
+function winnerLine(w){return `<div class="match-card"><b>🥇 ${esc(w.playerName)}</b> — <span class="goldtxt">2,000 ﷼</span><div class="muted">الجولة ${w.round} • ${esc(w.date||'')}</div></div>`}
+function submitPrediction(){let t=current(),pid=document.getElementById('predictionPlayer').value;if(!t||!pid)return alert('اختر اسم المشارك أولاً');let n=nextPredictionRound(t);if(!n)return alert('لا توجد جولة متاحة للتوقع');let results=[];for(let m of n.matches){let a=document.getElementById('pa_'+m.id)?.value,b=document.getElementById('pb_'+m.id)?.value;if(a===''||b===''||a===undefined||b===undefined)return alert('أكمل توقع جميع مباريات الجولة');if(!Number.isInteger(Number(a))||!Number.isInteger(Number(b))||Number(a)<0||Number(b)<0)return alert('أدخل نتائج رقمية صحيحة');results.push({matchId:m.id,scoreA:Number(a),scoreB:Number(b)})}t.predictions=t.predictions||[];let key=`${n.stage}_${n.round}`,old=t.predictions.find(p=>p.playerId===pid&&p.roundKey===key);let obj={id:old?.id||id(),playerId:pid,playerName:pName(pid),round:n.round,roundKey:key,stage:n.stage,results,createdAt:new Date().toISOString()};if(old)Object.assign(old,obj);else t.predictions.push(obj);save();document.getElementById('predictionMessage').textContent='تم تسجيل توقعك لجميع مباريات الجولة بنجاح.'}
+function checkPredictions(t,round,matches){let stage=matches[0]?.stage,key=`${stage}_${round}`,ids=matches.map(m=>m.id);(t.predictions||[]).filter(p=>p.roundKey===key).forEach(p=>{let perfect=p.results.length===ids.length&&ids.every(mid=>{let m=matches.find(x=>x.id===mid),r=p.results.find(x=>x.matchId===mid);return r&&Number(r.scoreA)===Number(m.scoreA)&&Number(r.scoreB)===Number(m.scoreB)});if(perfect&&!(t.predictionWinners||[]).some(w=>w.playerId===p.playerId&&w.roundKey===key)){t.predictionWinners.push({playerId:p.playerId,playerName:p.playerName,round,roundKey:key,prize:2000,date:new Date().toLocaleDateString('ar')})}})}
+function renderStats(){
+ let t=getT(document.getElementById('statsTournament').value)||current(),box=document.getElementById('statsContent');if(!t){box.innerHTML='<div class="empty">لا توجد بطولة</div>';return}
+ let rows=calcStandings(t),best=rows.filter(x=>x.played>0),game=t.game,leaders='';
+ if(game==='كرة القدم بالأصابع'){
+  let stats=footballGoalStats(t);
+  leaders=`<div class="goal-tables"><section class="goal-panel"><h3>🥇 الهدافون</h3>${goalTable(stats,'scorers')}</section><section class="goal-panel"><h3>🛡️ المدافعون</h3>${goalTable(stats,'defenders')}</section></div>`;
+ }else if(game==='لودو'){leaders=`<h3>🎲 الأكثر فوزاً</h3>${simpleRank([...best].sort((a,b)=>b.w-a.w),'w','انتصاراً')}<h3>🏆 الأعلى نقاطاً</h3>${simpleRank([...best].sort((a,b)=>b.points-a.points),'points','نقطة')}<h3>🧱 الأقل خسارة</h3>${simpleRank([...best].sort((a,b)=>a.l-b.l),'l','خسارة')}`}
+ else if(game==='الذاكرة'){leaders=`<h3>🧠 أبطال الذاكرة</h3>${simpleRank([...best].sort((a,b)=>b.w-a.w),'w','انتصاراً')}<h3>🎯 أفضل فارق نتائج مسجل</h3>${simpleRank([...best].sort((a,b)=>b.diff-a.diff),'diff','فارقاً')}`}
+ else{leaders=`<h3>🐍 الأكثر فوزاً</h3>${simpleRank([...best].sort((a,b)=>b.w-a.w),'w','انتصاراً')}<h3>⚡ أعلى حصيلة نتائج مسجلة</h3>${simpleRank([...best].sort((a,b)=>b.for-a.for),'for','نقطة')}<h3>🛡️ الأقل خسارة</h3>${simpleRank([...best].sort((a,b)=>a.l-b.l),'l','خسارة')}`}
+ box.innerHTML=`<div class="notice">الإحصائيات تشمل مباريات الذهاب والإياب، وتُحتسب كل مباراة مرة واحدة للاعبين الصحيحين.</div>${leaders}<h3>جدول الأداء العام</h3>${tableHtml(rows)}`;
+}
+function simpleRank(rows,key,label){return `<div class="tablewrap" style="margin-bottom:13px"><table><thead><tr><th>الترتيب</th><th>اللاعب</th><th>الإحصائية</th></tr></thead><tbody>${rows.slice(0,10).map((r,i)=>`<tr><td>${i+1}</td><td>${esc(r.name)}</td><td><b>${r[key]} ${label}</b></td></tr>`).join('')||'<tr><td colspan="3">لا توجد نتائج بعد</td></tr>'}</tbody></table></div>`}
+function buildLiveNews(t){
+ const out=[],done=(t.matches||[]).filter(m=>m.status==='done'&&m.bId);
+ const pending=(t.matches||[]).filter(m=>m.status!=='done'&&m.bId);
+ const add=(title,body)=>out.push({title,body,date:new Date().toLocaleDateString('ar')});
+ if(t.championId){
+  const final=(t.matches||[]).filter(m=>m.stage==='knockout'&&m.stageName==='النهائي'&&m.status==='done').slice(-1)[0];
+  let runner=final?(final.winnerId===final.aId?final.bId:final.aId):null;
+  add(`تتويج ${pName(t.championId)} بطلاً لبطولة ${t.name}`,
+      `حُسمت بطولة ${t.name} بعد اعتماد نتيجة المباراة النهائية، ليتوج ${pName(t.championId)} باللقب. ${runner?`وحل ${pName(runner)} وصيفاً بعد مشوار تنافسي حتى المواجهة الختامية.`:''} ويُبنى هذا التقرير على نتيجة النهائي المسجلة في سجل البطولة.`);
+ }else{
+  const finalUpcoming=pending.find(m=>m.stage==='knockout'&&m.stageName==='النهائي');
+  if(finalUpcoming){
+   const a=finalUpcoming.aName||pName(finalUpcoming.aId),b=finalUpcoming.bName||pName(finalUpcoming.bId);
+   const playedA=done.filter(m=>m.aId===finalUpcoming.aId||m.bId===finalUpcoming.aId).length;
+   const playedB=done.filter(m=>m.aId===finalUpcoming.bId||m.bId===finalUpcoming.bId).length;
+   add(`ترقب المواجهة النهائية في ${t.name}`,
+       `تتجه الأنظار إلى النهائي الذي يجمع ${a} و${b}. وتشير سجلات البطولة إلى أن ${a} خاض ${playedA} مباراة مسجلة قبل النهائي، مقابل ${playedB} مباراة لـ${b}. ستُحسم هوية البطل بعد تسجيل نتيجة المباراة النهائية واعتماد الفائز.`);
+  }else if(done.length){
+   const latest=done.slice().sort((a,b)=>String(b.updatedAt||'').localeCompare(String(a.updatedAt||'')))[0];
+   add(`أحدث نتائج المنافسة في ${t.name}`,
+       `شهدت البطولة اكتمال ${done.length} مباراة حتى الآن. وآخر نتيجة مسجلة في السجل هي ${latest.aName||pName(latest.aId)} ${latest.scoreA} – ${latest.scoreB} ${latest.bName||pName(latest.bId)}، وهي نتيجة تدخل ضمن حسابات الترتيب ومسار المنافسة وفق نظام البطولة.`);
+  }
+ }
+ if((t.groups||[]).length){
+  const groupLeaders=t.groups.map(g=>({group:g,leader:calcStandings(t,g.id).find(r=>r.played>0)})).filter(x=>x.leader);
+  if(groupLeaders.length)add(`صورة المنافسة في المجموعات`,
+   groupLeaders.map(x=>`${x.group.name}: يتصدر ${x.leader.name} برصيد ${x.leader.points} نقطة بعد ${x.leader.played} مباراة`).join('؛ ')+`. وتستند هذه القراءة إلى نتائج المباريات المسجلة في كل مجموعة.`);
+ }
+ const currentKnockout=pending.filter(m=>m.stage==='knockout').map(m=>m.stageName).filter(Boolean);
+ if(currentKnockout.length&&!pending.some(m=>m.stage==='knockout'&&m.stageName==='النهائي')){
+  const stage=currentKnockout[0];
+  if(stage==='ربع النهائي'||stage==='نصف النهائي')add(`منافسة الإقصائيات: ${stage}`,
+   `تتواصل مواجهات ${stage} في بطولة ${t.name}. وتبقى فرص التأهل مرتبطة بالنتائج التي ستُسجل وتُعتمد في المباريات المتبقية؛ لذلك لن يُعلن عن المتأهلين أو طرفي النهائي قبل اكتمال المواجهات.`);
+ }
+ const rows=calcStandings(t).filter(r=>r.played>0);
+ if(rows.length){
+  const leader=rows[0];
+  add(`صدارة الترتيب تحت المجهر`,
+      `يتصدر ${leader.name} جدول ${t.name} برصيد ${leader.points} نقطة من ${leader.played} مباراة، مع ${leader.w} فوزاً و${leader.d} تعادلات و${leader.l} خسائر. وتظل المراكز قابلة للتغير مع تسجيل نتائج المباريات المتبقية.`);
+  const winless=rows.filter(r=>r.played>=2&&r.w===0);
+  if(winless.length)add(`موقف يحتاج إلى تصحيح`,
+      `${winless.map(r=>`${r.name} (لعب ${r.played} ولم يحقق فوزاً)`).join('، ')} لم يحقق الفوز حتى الآن وفق النتائج المسجلة. وتمنح المواجهات المقبلة فرصة لتحسين الرصيد.`);
+ }
+ if(t.game==='كرة القدم بالأصابع'){
+  const scorers=footballGoalStats(t).sort((a,b)=>b.goals-a.goals);
+  if(scorers.length){
+   const top=scorers[0],rivals=scorers.filter(x=>x.id!==top.id&&top.goals-x.goals<=1);
+   add(`سباق الهدافين في ${t.name}`,
+       `يتصدر ${top.name} قائمة الهدافين برصيد ${top.goals} هدفاً من ${top.played} مباراة.${rivals.length?` ويلاحقه ${rivals.map(x=>`${x.name} برصيد ${x.goals} هدف`).join('، ')} في منافسة متقاربة على الصدارة.`:''} وتعكس الأرقام المباريات المكتملة أو المسجلة في قاعدة البطولة فقط.`);
+   const defense=scorers.slice().sort((a,b)=>a.conceded-b.conceded)[0];
+   if(defense&&defense.played>=1)add(`الأرقام الدفاعية`,
+       `يملك ${defense.name} أقل عدد من الأهداف المستقبلة بين المشاركين الذين خاضوا مباريات، بعدما استقبل ${defense.conceded} هدفاً في ${defense.played} مباراة.`);
+   const weak=scorers.filter(x=>x.played>=2&&x.conceded>=x.played*2);
+   if(weak.length)add(`تنبيه دفاعي`,
+       weak.map(x=>`${x.name} استقبل ${x.conceded} أهداف في ${x.played} مباريات`).join('، ')+`. ويعادل ذلك معدلاً لا يقل عن هدفين مستقبَلين في المباراة، وفق السجل الحالي.`);
+   const dated=done.filter(m=>m.updatedAt).sort((a,b)=>new Date(a.updatedAt)-new Date(b.updatedAt));
+   for(const row of scorers){
+    const recent=dated.filter(m=>m.aId===row.id||m.bId===row.id).slice(-3);
+    if(recent.length===3&&recent.every(m=>(m.aId===row.id?Number(m.scoreA)>Number(m.scoreB):Number(m.scoreB)>Number(m.scoreA)))){
+     add(`سلسلة انتصارات`,
+      `حقق ${row.name} ثلاثة انتصارات متتالية في آخر ثلاث مباريات مكتملة تحمل توقيت تحديث محفوظاً. وتستند السلسلة إلى النتائج المعتمدة في سجل البطولة.`);
+     break;
+    }
+   }
+  }
+ }
+ return out;
+}
+function renderNews(){
+ let t=current(),box=document.getElementById('newsList');
+ if(!t){box.innerHTML='<div class="empty">لا توجد بطولة نشطة</div>';return}
+ const live=buildLiveNews(t),saved=(t.news||[]);
+ const cards=[...live,...saved].map(n=>`<article class="news-card"><small>${esc(n.date||'')}</small><h3>${esc(n.title)}</h3><div style="white-space:pre-line">${esc(n.body)}</div></article>`).join('');
+ box.innerHTML=cards||'<div class="empty card">ستظهر الأخبار والتحليلات عند توفر نتائج فعلية في البطولة.</div>';
+}
+function importBackup(ev){let f=ev.target.files?.[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);if(!Array.isArray(x.players)||!Array.isArray(x.tournaments))throw Error();db=x;save();alert('تم استيراد النسخة بنجاح')}catch(e){alert('ملف النسخة الاحتياطية غير صالح')}};r.readAsText(f)}
+function repairLegacyKnockoutData(){
+ // فحص فقط: لا نحذف مباريات أو نتائج محفوظة عند فتح الصفحة.
+ let issues=0;
+ for(const t of db.tournaments||[]){
+  const ks=(t.matches||[]).filter(m=>m.stage==='knockout'&&m.bId);
+  for(const m of ks)if(m.aId===m.bId){issues++;t.knockoutError='يوجد سجل إقصائي قديم يواجه فيه اللاعب نفسه؛ لم تُحذف أي بيانات.';break}
+  const rounds=[...new Set(ks.map(m=>m.round))];
+  for(const r of rounds){const seen=new Set();for(const m of ks.filter(x=>x.round===r)){const key=m.tieId||m.id;if(seen.has(key))continue;seen.add(key);for(const pid of [m.aId,m.bId]){if(seen.has('player:'+pid)){issues++;t.knockoutError='يوجد تكرار في مواجهات دور إقصائي قديم؛ لم تُحذف أي بيانات.'}seen.add('player:'+pid)}}}
+ }
+ return issues;
+}
+const repairedBrackets=repairLegacyKnockoutData();
+renderAll();
+load().then(()=>{renderAll();}).catch(error=>console.error('Cloud initialization error:',error));
+if(repairedBrackets)console.warn('تم رصد '+repairedBrackets+' مشكلة محتملة في جدول إقصائي قديم. لم تُحذف أو تُعدّل أي نتائج تلقائياً.');
+</script></body></html>
